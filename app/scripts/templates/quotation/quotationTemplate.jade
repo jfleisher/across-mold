@@ -1,0 +1,46 @@
+div#edit-quotation.row.col-xs-12.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+  br
+  div.row
+    div.heading.col-xs-offset-1.col-xs-10 Get a quotation
+  
+  div.row
+    div.editing-subtitle.col-xs-2.col-xs-offset-1 Your name
+    input#quote_contact_name.col-xs-8.col-sm-6.col-md-4(class="settings personname", type="text", placeholder="your name (required)", value=contactName)
+
+  div.row
+    div.editing-subtitle.col-xs-2.col-xs-offset-1 E-mail
+    input#quote_email.col-xs-8.col-sm-6.col-md-4(class="settings email", type="email", placeholder="email address (required)", value=contactEmail)
+
+  div.row
+    div.editing-subtitle.col-xs-2.col-xs-offset-1 Company
+    input#quote_company_name.col-xs-8.col-sm-6.col-md-4(class="settings companyname", type="text", placeholder="company name", value=companyName)
+
+  div.row
+    div.editing-subtitle.col-xs-2.col-xs-offset-1 Job Name
+    input#quote_job_name.col-xs-8(class="settings jobname", type="text", placeholder="enter a job name or title", value=jobTitle)
+
+  div.row
+    div.editing-subtitle.col-xs-10.col-xs-offset-1 Job Description
+    textarea#quote_job_details.col-xs-10.col-xs-offset-1(class="settings jobdetails", resize="vertical", type="text",  rows="10", placeholder="enter a detailed job description (required)", value=jobDescription)
+
+  br
+  br
+  div.row
+    div.editing-subtitle.col-md-9.col-md-offset-1.visible-md.visible-lg Attachments - design documents, CAD drawings, supporting material, etc. (limit 25Mb)
+    div.editing-subtitle.col-sm-9.col-sm-offset-1.visible-sm Attachments - design documents, CAD drawings, etc. (limit 25Mb)
+    div.editing-subtitle.col-xs-8.col-xs-offset-1.visible-xs Attachments (limit 25mb)
+    div#quote-attachments.row.col-xs-10.col-xs-offset-1(placeholder='No Attachments')
+      div#quotation_file_btn.action-btn Add file
+      form
+        input#quotation_file(type="file", class="quotation-upload", accept="*")
+
+  br
+  br
+  div.row.update-buttons
+    input.visible-xs#quote-submit(type="button", class="button-alt greenbutton", value="Send")
+    input.hidden-xs#quote-submit(type="button", class="button-alt greenbutton", value="Send Request")
+    input#quote-cancel(type="button", class="button-link close-modal", data-closemodal="account-settings-modal", value="Cancel")
+
+
+
+  

@@ -1,0 +1,130 @@
+
+div.attributes-area
+  div.attributes-features
+    -var photoUrl = "images/placeholder_imgs/profile_placeholder.png"
+    if profile.profilePictureUrl
+      -photoUrl = profile.profilePictureUrl
+    div#profile-picture.attributes-photo(style="background:url('"+ photoUrl +"')")
+      span#edit-profile-photo(class="ss-write edit-icon attr-section-icon")
+
+    //-------------photo upload modal
+    div#profile-photo-modal.popover
+      span(class="ss-delete close-modal", data-closemodal="profile-photo-modal")
+
+      div.user-image-preview-profile
+        div#profilePicturePreview
+        input(type="file", id="profileImgUpload", class="uploadbox", accept="image/*")
+        div.upload-buttons
+          input(type="button", class="greenbutton right", id="upload-profile-image", value="Upload", disabled='true')
+
+    //----------------------
+    div.profile-subtitle Features
+        span(class="ss-write edit-icon attr-section-icon features-edit-icon open-modal", data-openmodal="attributesFeaturesEdit")
+
+        div.profile-features-area
+          if profile.profileFeatures
+            ul
+              if Mi.CMS[profile.profileType]
+                -for(key in Mi.CMS[profile.profileType].attributes)
+                  -var value = profile.profileFeatures[key] ? profile.profileFeatures[key] : ''
+                  li= Mi.CMS.labels[key] + ": " + value
+          else if Mi.CMS[profile.profileType]
+            ul
+              -for(key in Mi.CMS[profile.profileType].attributes)
+                li= Mi.CMS.labels[key] + ":"
+
+
+  div.attributes-location
+    span#edit-location(class="ss-write edit-icon location-icon")
+
+    div.profile-subtitle Location
+    div.location-container
+      div(class="location-map", id="location-map")
+        img(src="images/placeholder_imgs/location_placeholder.jpg")
+
+  //-------------location modal
+  div(class="attributes-location-edit popover", id="attributesLocationEdit")
+    span(class="ss-delete close-modal", data-closemodal="attributesLocationEdit")
+
+    div.profile-subtitle Edit Location
+    div.editing-subtitle
+      if (profile.profileType == 'executive' || profile.profileType == 'performer' || profile.profileType == 'behindthescenes')
+        |Enter your city or state. Please keep your address confidential.
+      else
+        |Help users find your business by entering your address.
+    br
+    div.profile-location-input-container
+      input(type="text", class="primary-input", class="profile-location-input", id="gmap-input")
+      &nbsp;
+      span
+        a.clear-location-input
+          |clear
+    br
+    br
+    div#location-edit-preview.location-map
+      img(src="images/placeholder_imgs/location_placeholder_edit.jpg")
+
+    div.update-buttons.pull-left
+      input(type="button", class="button-alt greenbutton", value="Update", id="save-location")
+      input(type="button", class="button-link close-modal", data-closemodal="attributesLocationEdit", value="Cancel")
+  //----------------------
+
+  //---------------- profile features edit modal thing
+
+  div(class="popover attrs-area-edit", id="attributesFeaturesEdit")
+    div.title-edit-top
+      span(class="ss-delete close-modal", data-closemodal="attributesFeaturesEdit")
+      span.editing-title Edit Features Information
+      br
+      br
+      span.editing-subtitle
+        |Enter only the details which will improve your chances of matching search criteria.
+
+      -var attributeList = []
+      -if(profile.profileType && Mi.CMS[profile.profileType])
+        -attributeList = Mi.CMS[profile.profileType].attributes
+      div.features-select-boxes
+        div.float-ul
+          ul
+            -var evenCtr=0
+            -each val, index in attributeList
+              -evenCtr += 1
+              if evenCtr % 2 == 1
+                -var labelStr = Mi.CMS.labels[index]
+                li
+                  div.attrs-feature-label.editing-subtitle
+                    =labelStr
+                  select.attrs-feature-input(type="text", data-featurename=index, data-placeholder=Mi.CMS.prompts[index])
+                    option=""
+                    -each val in attributeList[index]
+                      if profile.profileFeatures && profile.profileFeatures[index] == val
+                        option(selected)= val
+                      else
+                        option= val
+
+        //- div.vertical-divider
+        div.float-ul
+          ul
+            -var oddCtr = 0
+            -each val, index in attributeList
+              -oddCtr += 1
+              if oddCtr % 2 == 0
+                -var labelStr = Mi.CMS.labels[index]
+                li
+                  div.attrs-feature-label.editing-subtitle
+                    =labelStr
+                  select.attrs-feature-input(type="text", data-featurename=index, data-placeholder=Mi.CMS.prompts[index])
+                    option=""
+                    -each val in attributeList[index]
+                      if profile.profileFeatures && profile.profileFeatures[index] == val
+                        option(selected)= val
+                      else
+                        option=val
+
+      div.save-features-buttons
+        input(type="button", class="button-alt greenbutton", value="Done", id="save-features")
+        input(type="button", class="button-link close-modal",data-closemodal="attributesFeaturesEdit", value="Cancel")
+
+
+
+//- ---------------------------------------------------------------------------------------

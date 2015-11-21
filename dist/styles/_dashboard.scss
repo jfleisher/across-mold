@@ -1,0 +1,276 @@
+#dashboard-message-modal{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -200px;
+  min-height: 200px;
+  width: 400px;
+  #dashboard-message{
+    margin: 30px;
+  }
+  input[type="button"]{
+    float: right;
+    margin: 10px 20px;
+    border: 1px solid $gray-border;
+    width:100px;
+    height:36px;
+    background-color: $white-bkgd;
+    cursor:pointer;
+    &:hover {
+      background-color: darken($white-bkgd, 5%);
+    }
+  }
+}
+
+
+#profile-delete-modal{
+  z-index: 999;
+  background: #ffffff;
+  width: 300px;
+  height: 134px;
+  top: 125px;
+  left: 50%;
+  margin-left: -150px;
+  position: fixed!important;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  dashboard master view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+.dashboard-master {
+  margin-top: 30px;
+  max-width: 950px;
+  margin: 0 auto;
+  h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #ee572d;
+  }
+  @media only screen and (max-width: $screen-md-max){
+    padding: 0 10px;
+  }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  dashboard profile view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+.dashboard-profile {
+  width: 100%;
+  height: 135px;
+  border-radius: 8px;
+  position: relative;
+  background: $white-bkgd;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.dashboard-profile-area{
+  text-align: center; // so inline-block elements are centered
+}
+.dashboard-greeting-area {
+  height: 100px;
+  width: 100%;
+  font-size: 25px;
+  color: $darker-text;
+  padding-top: 37px;
+  padding-bottom:100px;
+
+  .dashboard-name{
+    float: left;
+    clear: left;
+  }
+
+  .profile-header-buttons{
+    clear: left;
+    padding-top: 22px;
+  }
+
+}
+
+.favorites_empty{
+
+}
+
+.profile-image {
+  width: 60px;
+  height: 60px;
+  border: 1px solid $title-color-secondary;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  margin-right: 20px;
+  background-size: cover!important;
+  background-repeat: no-repeat!important;
+}
+
+.profile-left {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding-top: 20px;
+  .profile-image{
+    float: left;
+    top: 0;
+    margin-right: 25px;
+  }
+  .profile-detail{
+    max-width: 65%;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    text-overflow: ellipsis;
+    .profile-left-title{
+      position: relative;
+      float: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 500;
+      color: $title-color-secondary;
+      font-size: 18px;
+      margin-right: 5px;
+      max-width: 100%;
+    }
+    .profile-type{
+      line-height: 20px;
+      float: left;
+      font-weight: 300;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      position: relative;
+    }
+    .profile-skills{
+      position: relative;
+      float: left;
+      clear: both;
+      font-size: 14px;
+      color: $subdued-text;
+      font-weight: 300;
+      max-width: 580px;
+      margin-top: 5px;
+      max-height: 40px;
+      overflow: hidden;
+      white-space: normal;
+      font-size: 13px;
+      line-height: 17px;
+      text-overflow: ellipsis;
+    }
+  }
+  .message{
+    color: $subdued-text;
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    left: 81px;
+    right: 5px;
+    p:first-of-type{ margin-top: 25px;}
+    p{margin-bottom: 9px;}
+
+    @media only screen and (max-width: $screen-xs-max){
+      font-size: 14px;
+      p:first-of-type{ margin-top: 8px;}
+    }
+  }
+}
+
+.profile-sub-nav {
+  height: 35px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // border: 1px solid red;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: $dasboard-sub-nav;
+  font-weight: 300;
+  padding: 8px;
+  padding-left: 20px;
+}
+
+.sub-nav-status {
+    float:right;
+    color:$title-color-secondary;
+    .status-live {
+        color:$pale-green;
+    }
+}
+.sub-nav-likes {
+    float:right;
+    color: $darker-text;
+    width: 120px;
+    font-weight: 400;
+    .counter{
+      font-weight: 200;
+    }
+}
+.sub-nav-button{
+  float: left;
+  cursor: pointer;
+  padding-right:20px;
+  border:none;
+  font-size:16px;
+  font-weight:100;
+  background:none;
+  height:20px;
+  color:$darker-text;
+  &:hover{
+    color:$title-color-secondary;
+  }
+}
+.profile-right {
+  position: absolute;
+  right: 25px;
+  font-size: 30px;
+  color: $inactive-text;
+  top: 25px;
+  span {
+    margin-right: 35px;
+  }
+  .right-progress-bar-container {
+    width: 200px;
+    height: 35px;
+    border: 1px solid $pale-green;
+    border-radius: 4px;
+    background-color:$subdued-text;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    .progress-bar {
+      position: absolute;
+      width: 0px;
+      height: 100%;
+      background: $pale-green;
+      border-radius: 3px;
+      z-index: 9;
+    }
+    .progress-text{
+      margin-right: 1px;
+      height: 35px;
+      z-index: 99;
+      position: relative;
+      padding-top: 10px;
+      padding-left: 10px;
+      color: white;
+      // text-shadow: 2px 2px #fff;
+    }
+  }
+}
+
+.dashboard-favorite{
+  width: 100%;
+}
+
+.add-new-profile {
+  padding-top: 100px;
+}

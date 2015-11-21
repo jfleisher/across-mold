@@ -1,0 +1,20 @@
+div.dashboard-greeting-area
+  div.dashboard-name Hello,&nbsp;
+    if (user.get("firstName"))
+      =user.get("firstName")
+    else
+      =user.firstName
+
+  div.profile-header-buttons
+    input#my-profiles(type="button", class="button-link active", value="My Profiles")
+    input#my-favorites(type="button", class="button-link", value="My Favorites")
+    input#add-new-profile.hidden(type="button", class="button-link right", value="Add Profile +")
+
+  div#profile-delete-modal.popover
+      span.confirm-delete-subtitle Are you sure you want to delete this profile?
+      br
+      input(type="button", id="delete-profile-confirm", class="confirm-delete-button", value="Yes")
+      input(type="button", class="confirm-delete-button close-modal", value="No", data-closemodal="profile-delete-modal")
+
+
+div.dashboard-profile-area

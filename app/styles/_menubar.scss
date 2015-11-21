@@ -1,0 +1,414 @@
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  top navbar styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+#AcrossMold-logo{
+  cursor: pointer;
+  height: 40px;
+}
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(39,46,55);
+  z-index: 998;
+  text-align: center;
+  height: 50px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+
+  .select2-container-multi .select2-choices {
+    width: 265px !important;
+    margin-right: 30px !important;
+    font-style: italic !important;
+    font-size: 12px !important;
+    height: 38px !important;
+    box-sizing: border-box !important;
+    border: 2px solid $gray-border !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    background: $input-bkgd !important;
+    padding-left: 10px !important;
+    .select2-search-choice {
+      width: auto;
+      height: 80%;
+      font-size: 19px;
+      background: inherit;
+      border: none;
+      font-style: normal;
+      box-shadow: none;
+      vertical-align: bottom;
+      line-height: 21px;
+    }
+  }
+
+
+  .nav-content  {
+    height: 40px;
+    margin-top: 6px;
+    position: relative;
+    display: inline-block;
+    .logo{
+      vertical-align: top;
+      padding-right: 10px;
+      display: inline-block;
+      margin-top: 0;
+      position: relative;
+      float: left;
+    }
+    .search {
+      margin-top: -8px;
+      vertical-align: top;
+      padding-right: 100px;
+      display: inline-block;
+      position: relative;
+      float: right;
+      .primary-input {
+        width: 300px;
+        margin: 10px 20px 5px 20px;
+        font-style: italic;
+        line-height: 18px;
+      }
+      .location-input {
+        width: 200px;
+        margin: 10px 20px 5px 20px;
+        font-style: italic;
+        line-height: 18px;
+      }
+
+    }
+  }
+
+  .ui-helper-hidden-accessible{ display: none; }
+  .ui-autocomplete{
+    top: 43px!important;
+    background: $white-bkgd;
+    border-radius: 2px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 998!important;
+    font-family: Roboto!important;
+    font-size: 16px!important;
+    .ui-menu-item{
+      cursor: default;
+      padding: 0 4px !important;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      line-height: 30px;
+      text-align: left;
+      border-top: 1px solid transparent;
+      font-size: 14px;
+      color: #999!important;
+      line-height: 25px;
+      border-radius: 0!important;
+      a{ color: $gray-dark;}
+      .ui-state-focus{
+        background: #ebf2fe!important;
+        font-weight: bold!important;
+        border-radius: 0!important;
+      }
+    }
+  }
+
+  .pac-container{
+    font-family: Roboto!important;
+    font-size: 16px!important;
+  }
+
+  .logo {
+    img {
+          margin-right: 20px;
+
+    }
+  }
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////
+  ////////////////  top dropdown styles
+  ///////////////
+  //////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+  #account-icon  {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    img {
+      border: 1px solid $gray-border;
+      border-radius: 20px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  #account-dropdown {
+    padding: 15px 8px 10px 8px;
+    position: absolute !important;
+    right: 0;
+    top: 50px;
+    z-index: 9999;
+    display: none;
+    width: 200px;
+    background: $white-bkgd;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 18px;
+    a{
+      color: $subdued-text;
+
+    }
+    span {
+      float: right;
+      color: $title-color-secondary;
+    }
+  }
+
+  .active-border {
+    border: 1px solid $title-color-secondary !important;
+    border-radius: 20px;
+  }
+
+
+
+
+  #menu-log-in{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    cursor: pointer;
+  }
+
+  .log-btn{
+      position:absolute;
+    border: 1px solid $gray-border;
+    top:14px;
+    left:240px;
+    width:120px;
+    height:40px;
+    background: $title-color-secondary;
+    color:white;
+    cursor:pointer;
+    &:hover {
+      background-color: darken($title-color-secondary, 5%);
+    }
+  }
+
+
+////////////////////////////////////////////////////////////////////
+//
+//           Mobile View Styles
+//
+///////////////////////////////////////////////////////////////////
+
+  .mobileview{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    vertcal-align: top;
+    text-align: center;
+    font-size: 14px;
+    .logo{
+      display: inline-block;
+      float: none;
+      margin-top: 7px;
+      padding: 0;
+    }
+    #usermenu{
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 10px;
+      &:hover{
+        background-color: lighten($gray-dark, 50%)
+      }
+      &.depressed{
+        background-color: lighten($gray-dark, 50%);
+      }
+      .usermenu_icon{
+        background-image: url(../images/account-icon.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .dropdown{
+      background-color: $gray-dark;
+      position: absolute;
+      display: none;
+      top: 50px;
+      right: 0;
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: none;
+      border-bottom: 3px solid lighten($gray-dark, 50%);
+      input[type="text"], input[type="password"], input[type="email"]{
+        margin: 0 auto 15px auto;
+        width: 80%;
+        line-height: 23px;
+        height: 35px;
+      }
+      input[type='button']{
+        margin-right: 10%;
+        float: right;
+        height: 32px;
+      }
+    }
+    #usermenuDropdown{
+      a.login{
+        color: $gray-light;
+        float: left;
+        margin-top: 9px;
+        margin-left: 18%;
+      }
+      &.logged-in{
+        width: 270px;
+        border-bottom: 3px solid lighten($gray-dark, 50%);
+        border-left: 3px solid lighten($gray-dark, 50%);
+        padding-bottom: 10px;
+        ul{
+          width: 100%;
+          li{
+            color: $gray-light;
+            font-size: 25px;
+            line-height: 25px;
+            margin-top: 3px;
+            width: 100%;
+            clear: both;
+            padding-top: 10px;
+            text-align: left;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            &:hover, &:hover a{
+              background-color: lighten($gray-dark, 50%);
+              color: $gray-dark;
+            }
+            div{
+              &.ss-desktop,
+              &.ss-lock,
+              &.ss-info{
+                float: left;
+                margin-top: 5px;
+                font-size: 30px;
+                margin-right: 5px;              }
+            }
+            a{
+              font-size: 20px;
+              margin-left: 10px;
+              color: $gray-light;
+            }
+          }
+        }
+      }
+    }
+    #searchmenu{
+      position: fixed;
+      left: 0;
+      top: 0;
+      padding: 10px;
+      &:hover{
+        background-color: lighten($gray-dark, 50%);
+      }
+      &.depressed{
+        background-color: lighten($gray-dark, 50%);
+      }
+      .searchmenu_icon{
+        background-image: url(../images/search-icon.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    #searchmenuDropdown{
+      .ui-helper-hidden-accessible{ display: none; }
+      .ui-autocomplete{
+        top: 63px !important;
+        background: $white-bkgd;
+        border-radius: 2px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        z-index: 998!important;
+        font-family: Roboto!important;
+        font-size: 16px!important;
+        .ui-menu-item{
+          cursor: default;
+          padding: 0 4px !important;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          line-height: 30px;
+          text-align: left;
+          border-top: 1px solid transparent;
+          font-size: 14px;
+          color: #999!important;
+          line-height: 25px;
+          border-radius: 0!important;
+          a{ color: $gray-dark; width: 100%;}
+          .ui-state-focus{
+            background: #ebf2fe!important;
+            font-weight: bold!important;
+            border-radius: 0!important;
+          }
+        }
+      }
+
+    }
+
+  }
+
+} // .fixed-navbar
+
+
+
+/////////////////////////////////////////////////////////
+/////
+/////   Message box styles
+/////
+////////////////////////////////////////////////////////
+#site-message-modal{
+  .modal-dialog{
+    z-index: 9999;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+    min-height: 200px;
+    width: 400px;
+    #site-message{
+      margin: 30px;
+    }
+  }
+  input[type="button"]{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    border: 1px solid $gray-border;
+    width:100px;
+    height:36px;
+    background-color: $white-bkgd;
+    cursor:pointer;
+    &:hover {
+      background-color: darken($white-bkgd, 5%);
+    }
+  }
+  .working-animation{
+    background-image: url(../images/Loading.gif);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    position: relative;
+    margin-left: -25px;
+    margin-top: -60px;
+    margin-bottom: 25px;
+  }
+}

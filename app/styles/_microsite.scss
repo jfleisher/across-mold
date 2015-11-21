@@ -1,0 +1,1055 @@
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  microsite master view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.microsite-master {
+  display: block;
+  .button{
+    height: 30px;
+    margin: 9px 0;
+    padding: 0 14px;
+  }
+}
+
+img.sales-header{
+  width: 100%;
+}
+
+img[src="images/microsite_images/main-image2-lg.jpg"]{
+  top:0;
+  @media only screen and ( orientation: portrait ) and (max-width: 2100) and (min-width: 2001){ margin-left: 0px }
+  @media only screen and ( orientation: portrait ) and (max-width: 2000) and (min-width: 1901){ margin-left: 100px }
+  @media only screen and ( orientation: portrait ) and (max-width: 1900) and (min-width: 1801){ margin-left: 200px }
+  @media only screen and ( orientation: portrait ) and (max-width: 1800) and (min-width: 1701){ margin-left: 300px }
+  @media only screen and ( orientation: portrait ) and (max-width: 1700) and (min-width: 1601){ margin-left: 400px }
+  @media only screen and ( orientation: portrait ) and (max-width: 1600) and (min-width: 1501){ margin-left: 500px }
+  @media only screen and ( orientation: portrait ) and (max-width: 1500) and (min-width: 1401){ margin-left: 600px }
+}
+
+img[src="images/microsite_images/main-image2-md.jpg"]{
+  top:0;
+  @media only screen and ( orientation: portrait ) and (max-width: 1400) and (min-width: 1301){ margin-left: 100px }
+  @media only screen and ( orientation: portrait ) and (max-width: 1300) and (min-width: 1201){ margin-left: 200px }
+  @media only screen and ( orientation: portrait ) and (max-width: 1200) and (min-width: 1101){ margin-left: 300px }
+  @media only screen and ( orientation: portrait ) and (max-width: 1100) and (min-width: 1001){ margin-left: 400px }
+}
+
+img[src="images/microsite_images/main-image2-sm.jpg"]{
+  top:0;
+  @media only screen and (max-width: 1000) and (min-width: 901){ margin-left: 0px }
+  @media only screen and (max-width: 900) and (min-width: 801){ margin-left: 100px }
+  @media only screen and (max-width: 800) and (min-width: 701){ margin-left: 200px }
+  @media only screen and (max-width: 700) and (min-width: 601){ margin-left: 300px }
+  @media only screen and (max-width: 600) and (min-width: 501){ margin-left: 400px }
+  @media only screen and (max-width: 500) and (min-width: 401){ margin-left: 500px }
+  @media only screen and (max-width: 400) and (min-width: 301){ margin-left: 600px }
+}
+
+.table{
+  position: relative;
+  display: table;
+  .cell-middle{
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    .description{
+      width: 60%;
+      float: left;
+    }
+    .image{
+      float: left;
+      width: 39%;
+    }
+  }
+}
+
+button.close{
+  float: right;
+}
+#login-email{
+  width: 350px;
+  height: 50px;
+  padding: 10px 20px;
+  line-height: 30px;
+  background-color: $white-bkgd;
+  font-weight: 100;
+  margin-left:60px;
+  font-size:16px;
+
+}
+#login-password{
+  width: 350px;
+  height: 50px;
+  padding: 10px 20px;
+  line-height: 30px;
+  background-color: $white-bkgd;
+  font-weight: 100;
+  font-size:16px;
+  margin-left:60px;
+}
+
+#submit-login{
+  background: #555da3;
+  color: $white-bkgd;
+  width: 350px;
+  margin-left:60px;
+  height: 60px;
+  margin-top:20px;
+  font-size:20px;
+  font-weight:200px;
+   &:hover{
+   color: lighten($white-bkgd, 10%);}
+
+}
+
+#login-box{
+  z-index: 9999;
+  background-color: #f1efea;
+  color: grey;
+  font-weight: 300;
+  font-size: 24px;
+  height: 345px;
+  width: 500px;
+  position: fixed;
+  margin: 100px -250px;
+  left: 50%;
+
+  #center-login{
+    text-align: center;
+    font-size:16px;
+    margin-top:10px;
+  }
+
+  #bold-login{
+    font-weight:400;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: $screen-xs-max) {
+    margin-top: 15px;
+    width: 300px;
+    margin: 100px -150px;
+    font-size: 13px;
+    #submit-login{
+      width: 200px;
+      margin: 30px 0 20px 30px;
+      height: 40px;
+      font-size: 16px;
+    }
+    #login-email,
+    #login-password{
+      width: 240px;
+      margin: 10px;
+    }
+  }
+
+}
+.microsite-panel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  cursor:pointer;
+  top:0px;
+  .panel-desc {
+    width: 360px;
+    height: 375px;
+    // border: 1px solid blue;
+    position: relative;
+  }
+  .left {
+    float: left;
+    text-align: left;
+    background: $black-opacity;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .middle {
+    margin: 0 auto;
+    text-align: left;
+  }
+  .right {
+    text-align: left;
+    float: right;
+    background: $white-opacity;
+    font-size: 18px;
+    font-weight: 300;
+
+  }
+    .righta {
+    text-align: left;
+    float: right;
+    background: $white-opacity2;
+    font-size: 18px;
+    font-weight: 300;
+
+  }
+
+  .dark {
+  background: $black-opacity;
+  }
+
+  .profile-type-desc {
+    position: relative;
+    width: 420px;
+    height: 275px;
+    top: 3em;
+    // border: 1px solid blue
+  }
+  .right-image{
+    width: 600px;
+    // height: 300px;
+      top:-80px;
+      left:-150px;
+      position: absolute;
+    img {
+       width: 250%;
+       //height: 100%;
+      position: relative !important;
+    }
+  }
+
+}
+.white-text {
+ color: #fff ;
+}
+
+#landing-section-panel {
+  color: #000;
+  background: none;
+}
+
+
+.microsite-background{
+   position: relative;
+   top: 0px;
+   width: 100%;
+   text-align: center;
+   &.sales{
+     background: $white-bkgd;
+   }
+   &.faq{
+   }
+   .faq_background{
+     color: $darker-text;
+     display: inline-block;
+     background: $white-bkgd;
+     position: relative;
+     @media only screen and (max-width: $screen-xs-max) { margin: 50px auto; width: 90%;  }
+     @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { margin: 50px auto; width: 800px}
+     @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { margin: 50px auto; width: 800px}
+     @media only screen and (min-width: $screen-md-max+1) { margin: 50px auto; width: 800px; }
+
+     .header{
+      text-align: left;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 30px;
+      margin: 20px 15px 30px 15px;
+     }
+     .expander{
+       position: absolute;
+       top: 7px;
+       right: 7px;
+       width: 28px;
+       height: 23px;
+       background: url(../images/arrow-left.png);
+       &.expanded{
+         background: url(../images/arrow-down.png);
+         height: 28px;
+         width: 23px;
+         top: 3px;
+       }
+     }
+      .label{
+        float: left;
+        height: 100%;
+        position: relative;
+      }
+     .question{
+       cursor: pointer;
+       background: $dulled-bkgd;
+       float: left;
+       text-align: left;
+       position: relative;
+       padding: 10px 10px 10px 15px;
+       width: 90%;
+     }
+     .answer{
+        clear: left;
+        float: left;
+        margin-left: 35px;
+        text-align: left;
+        font-weight: lighter;
+        line-height: 18px;
+        font-size: 14px;
+        @media only screen and (max-width: $screen-xs-max) { padding: 10px 40px 20px 0;}
+        @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { padding: 10px 100px 20px 0; }
+        @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { padding: 10px 100px 20px 0;}
+        @media only screen and (min-width: $screen-md-max+1) {padding: 10px 100px 20px 0; }
+      }
+     .text{
+       padding-left: 28px;
+       padding-right: 25px;
+     }
+   }
+   .faq_footer{
+     margin: 20px auto;
+     line-height: 50px;
+   }
+
+    @media (min-width: 2100px) {
+      .img-holder{
+        &.large{ display: block; }
+        &.medium{ display: none!important; }
+        &.small{ display: none!important; }
+      }
+    }
+    @media (min-width: 1100px) and (max-width: 2099px) {
+      .img-holder{
+        &.large{ display: none!important; }
+        &.medium{ display: block; }
+        &.small{ display: none!important; }
+      }
+    }
+    @media (max-width: 1099px) {
+      .img-holder{
+        &.large{ display: none!important; }
+        &.medium{ display: none!important; }
+        &.small{ display: block; }
+      }
+    }
+
+}
+
+
+
+
+
+
+//microsite backgrounds
+
+.bkgd-one {
+  background: $bkgd-one;
+  // top: 20px;
+}
+
+.action-buttons {
+  position: absolute;
+  bottom: 0;
+    left: 50px;
+  input {
+    &:first-child {
+      margin-right: 50px;
+    }
+    height: 40px;
+    width: 130px;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+    bottom: -60px;
+    border: none;
+  }
+}
+
+
+
+.profile-desc-title {
+  font-size: 48px;
+  font-weight: bold;
+  padding: 10px;
+
+}
+.profile-desc-content {
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.microsite-landing-subtitle {
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+.microsite-landing-title {
+  color: $title-color-secondary;
+  font-size: 25px;
+  padding: 10px;
+
+}
+
+.microsite-learn-more {
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: $title-color-secondary;
+    margin-top:10px;
+
+  }
+  h2 {
+    font-size: 20px;
+    font-style: italic;
+    margin: 20px 0 10px 0;
+    color: $title-color-secondary;
+    font-weight:400;
+  }
+    margin-left:auto;
+    margin-right:auto;
+    width:70%;
+    padding-left:190px;
+    padding-bottom:170px;
+    position:absolute;
+    top:50px;
+}
+
+.audience-buttons {
+    width: 500px;
+    transition: left ease-in 0.8s;
+    input {
+    margin: 0;
+    top: 30;
+
+    }
+  .action-buttons{
+  }
+}
+
+
+.microsite-content{
+  background-color:white;
+  background-color:$white-bkgd;
+  min-height: 415px;
+  @media only screen and (max-width: $screen-xs-max) { padding: 10px 5px;}
+  @media (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { padding: 15px; }
+  @media (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { padding: 25px; }
+  @media (min-width: $screen-md-max+1) { padding: 30px }
+
+  img:not(.scrolldown-top-button, .scrolldown-button, .scrolldown-arrow){
+    padding: 20px;
+    max-width: 420px;
+  }
+  .landing-contentslide{
+    @media only screen and ( orientation: landscape ) { width: 90%; }
+    @media only screen and ( orientation: portrait ) { width: 95%; }
+    margin: 0 auto;
+    text-align:left;
+    color: $darker-text;
+    .subhead{
+      color: $AcrossMold-blue;
+      font-weight: 500;
+      text-align: left;
+    }
+    @media only screen and (max-width: $screen-xs-max) {
+      p{
+        margin: 16px 0;
+        font-size: 18px;
+        line-height: 22px;
+        &.subhead{
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+    }
+    @media (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) {
+      p{
+        margin: 16px 0;
+        font-size: 22px;
+        line-height: 27px;
+        &.subhead{
+          font-size: 27px;
+          line-height: 32px;
+        }
+      }
+    }
+    @media (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) {
+      p{
+        margin: 16px 0;
+        font-size: 24px;
+        line-height: 29px;
+        &.subhead{
+          font-size: 29px;
+          line-height: 34px;
+        }
+      }
+    }
+    @media (min-width: $screen-md-max+1) {
+      p{
+        margin: 16px 0;
+        font-size: 28px;
+        line-height: 33px;
+        &.organgesub{
+          font-size: 33px;
+          line-height: 38px;
+        }
+      }
+    }
+  }
+  img{
+    &.scrolldown-arrow,
+    &.scrolldown-button{
+      @media only screen and (max-width: $screen-xs-max) { width: 40px;  }
+      @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { width: 50px; }
+      @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { width: 60px;}
+      @media only screen and (min-width: $screen-md-max+1) { width: 70px; }
+    }
+  }
+}
+
+.microsite-action{
+  background: $input-bkgd;
+  padding-top: 25px;
+  .header{
+    font-size: 22px;
+  }
+  .action-holder{
+    display: table;
+    border-collapse: separate;
+    @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1){
+      border-spacing: 15px;
+    }
+    @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1){
+      border-spacing: 25px;
+    }
+    @media only screen and (min-width: $screen-md-max+1){
+      border-spacing: 40px;
+    }
+  }
+}
+
+.action-btn{
+  color: $white-text;
+  text-shadow: $text-outline;
+  background-color: $AcrossMold-blue;
+  cursor: pointer;
+  border-radius: 8px;
+  @media only screen and (max-width: $screen-xs-max) {
+    width: 235px;
+    height: 40px;
+    font-size: 17px;
+    line-height: 40px;
+    margin-bottom: 12px;
+    &.double{ width: 235px;}
+  }
+  @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1){
+    width: 150px;
+    height: 60px;
+    font-size: 16px;
+    display: table-cell;
+    vertical-align: middle;
+    &.double{ width: 300px;}
+  }
+  @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1){
+    width: 160px;
+    height: 65px;
+    font-size: 18px;
+    display: table-cell;
+    vertical-align: middle;
+    &.double{ width: 300px;}
+  }
+  @media only screen and (min-width: $screen-md-max+1){
+    width: 190px;
+    height: 70px;
+    font-size: 22px;
+    display: table-cell;
+    vertical-align: middle;
+    &.double{ width: 300px;}
+  }
+  &:hover{
+    opacity: 0.9;
+  }
+}
+
+
+.learn-more{
+    left: 50%;
+    margin-left: 20px;
+    bottom:170px;
+  }
+
+.grey{
+	background-color: #999999;
+    border: 1px solid $white-opacity;
+    &:hover {
+    background-color: #ff6633;
+   }
+}
+.orange {
+	background-color: #ff6633;
+    border: 1px solid $white-opacity;
+}
+
+#imgopacity
+{
+	filter:alpha(opacity=100);
+	-moz-opacity: 1;
+	opacity: 1;
+	-khtml-opacity: 1;
+}
+
+#imgopacity:hover
+
+{
+filter:alpha(opacity=70);
+-moz-opacity: 0.7;
+opacity: 0.7;
+-khtml-opacity: 0.7;
+}
+
+///New Microsite///
+
+
+.terms{
+  position: relative;
+  margin: 65px 0;
+  height: 90%;
+  padding:30px;
+  background: $white-bkgd;
+  font-size: 16px;
+  color: $darker-text;
+  display:inline-block;
+  text-align:left;
+  .indented{
+    margin-left: 5vw;
+  }
+  .scrollable-div{
+    position: relative;
+    overflow-y:scroll;
+    height: 94%;
+    min-height: 450px;
+    width: 100%;
+    font-size: 16px;
+    color: $darker-text;
+    margin-top:20px;
+    p {
+      margin-top: 1.3em;
+    }
+
+    -webkit-touch-callout: text!important;
+    -webkit-user-select: text!important;
+    -khtml-user-select: text!important;
+    -moz-user-select: text!important;
+    -ms-user-select: text!important;
+    user-select: text!important;
+  }
+}
+
+.headr{
+font-size:24px;
+}
+
+.help-pages-background{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  &.row{ position: absolute;}
+  ul{
+    display: inline!important;
+    list-style: circle;
+    li{ margin: 10px 10px 10px 30px; }
+  }
+  ol{
+    list-style: decimal;
+    display: inline!important;
+    li{ margin: 10px 10px 10px 30px};
+    &.legal{ list-style: decimal; }
+    &.legal.sublist{ list-style:lower-alpha; }
+  }
+  .contact-us{
+    position: relative;
+    margin: 80px auto;
+    background-color: $white-bkgd;
+    padding: 30px;
+    text-align: center;
+    width: 80%;
+    max-width: 730px;
+    p{ text-align: left;}
+    .contact-button{
+      a{
+        color: $white-text!important;
+        text-shadow: $text-outline;
+      }
+      font-size: 16px;
+      background-color: $AcrossMold-blue;
+      border-radius: 5px;
+      height: auto;
+      width: auto;
+      text-align: center;
+      margin: 30px 15px;
+      padding: 25px 15px 25px 15px;
+      display: inline-block;
+      &:hover{
+        background-color: darken($AcrossMold-blue, 10%);
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.help-pages-footer{
+    position:absolute;
+    bottom:0px;
+    width:100%;
+}
+
+
+
+
+.sm{font-weight: lighter;
+font-size:14px;}
+.med{font-size:16px;}
+.bg{font-size:24px;
+font-weight:bolder}
+.light{font-weight:lighter;}
+
+.callbutton{
+    position:relative;
+    left: 50%;
+    margin-left: -60px!important;
+}
+
+
+////Sales Pages////
+.microheadline{
+  color: $white-bkgd;
+  text-shadow: 1px 1px 1px #333333;
+  font-weight:500;
+  height: 100%;
+  position: relative;
+  @media only screen and (orientation: landscape) { padding-top: 20%; }
+  @media only screen and (orientation: portrait) { padding-top: 28%; }
+  margin-bottom: 14vw;
+  .headline{
+    @media (max-width: $screen-xs-max) { font-size: 50px;  }
+    @media (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { font-size: 70px; }
+    @media (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { font-size: 85px;}
+    @media (min-width: $screen-md-max+1) { font-size: 100px; }
+  }
+  .medd{
+    font-weight:300;
+    @media (max-width: $screen-xs-max) { font-size: 23px;  }
+    @media (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { font-size: 30px; }
+    @media (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { font-size: 38px;}
+    @media (min-width: $screen-md-max+1) { font-size: 45px; }
+  }
+  img.scrolldown-top-button{ position: absolute; bottom: 55px; }
+}
+
+
+.darkhead{
+  color: $darker-text;
+  @media (max-width: $screen-xs-max) { font-size: 17px;  }
+  @media (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { font-size: 21px; }
+  @media (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { font-size: 26px;}
+  @media (min-width: $screen-md-max+1) { font-size: 28px; }
+  text-shadow: 0px 0px 0px ;
+  .darksub{
+    font-size: 19px;
+    font-weight:300;
+  }
+}
+
+.microcon{
+    padding:30px 80px 20px 30px;
+    width:60%;
+    border-width: medium;
+    border-color: black;
+    height:600px;
+
+}
+
+.microcontent{
+    text-align:left;
+    color: $darker-text;
+}
+.microcontentright{
+    text-align:right;
+    float:right;
+    color: $darker-text;
+}
+
+.bluebutton{
+  position:relative;
+  border-radius: 4px;
+  font-size: 16px;
+  color: $white-bkgd;
+  cursor: pointer;
+  top:10px;
+  background: rgb(80,87,159);
+  border: 0px solid $gray-border;
+  opacity: 0.9;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+#bbv{
+    @extend .bluebutton;
+    }
+
+.blue-button-microsite{
+    @extend .bluebutton;
+    height: 60px!important;
+    font-size: 30px!important;
+    opacity: 0.90;
+    border: 1px transparent;
+    padding: 2px 10px;
+    &:hover{
+      opacity: 1;
+    }
+}
+
+.sub-menu {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 42px;
+  background: $white-bkgd;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  box-shadow: inset 0px 3px 7px -5px #000, 0px 4px 14px -10px #000;
+  z-index: 99;
+  .white-button:nth-child(n+1) {
+    margin-left: 50px;
+  }
+}
+#profileimg{
+  cursor:pointer;
+}
+
+.largeprofile-preview{
+  max-width: 100%;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .modal-content{
+    display: inline-block;
+    background: transparent;
+    border-radius: 15px;
+    margin: 5%;
+    overflow: hidden;
+  }
+  img{ width: 100%; }
+}
+
+.scrolldown-top-button,
+.scrolldown-button{
+  background: url("../images/microsite_images/arrow2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  filter: alpha(opacity=80);
+  color: $white-bkgd;
+  &:hover{
+    color: lighten($white-bkgd, 10%);
+    text-decoration: none;
+  }
+  left: 50%;
+  @media (max-width: $screen-xs-max) { width: 40px; margin-left: -20px; }
+  @media (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { width: 50px; margin-left: -25px; }
+  @media (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { width: 60px; margin-left: -30px; }
+  @media (min-width: $screen-md-max+1) { width: 70px; margin-left: -35px; }
+}
+
+#landing-slide {
+    width:100%;
+    height:auto;
+
+}
+
+
+
+/////////landing page////////////
+
+#landing-background{
+  @extend.microsite-background;
+  .top-overlay{
+   position: absolute;
+   width: 100%;
+   top:0;
+  }
+  .top-spacer{
+   height: 386px;
+   background: $white-bkgd;
+   margin-top: 279px;
+  }
+}
+
+.blue-button-landing{
+  @extend .bluebutton;
+  width:200px;
+  margin-top:14px;
+  margin-bottom:10px;
+}
+
+.sales-subtitle{
+    text-align:center;
+    width:100%;
+    @media only screen and (max-width: $screen-xs-max) { margin: 30px 0 20px 0; }
+    @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) {margin: 50px 0 20px 0;}
+    @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { margin: 70px 0 20px 0;}
+    @media only screen and (min-width: $screen-md-max+1) { margin: 80px 0 20px 0; }
+}
+
+.sales-textdiv {
+  display: inline-block;
+  color: #5c5c5a;
+  text-align: left;
+  vertical-align: top;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 30px;
+  min-height: 360px;
+  .subhead{
+    color: $AcrossMold-blue;
+    font-weight: 500;
+    text-align: left;
+  }
+}
+
+.sales-imgdiv {
+  display: inline-block;
+  img{
+    margin: 0;
+  }
+}
+
+.sales-button-div
+{
+    width:100%;
+    height:100px;
+    float:left;
+    clear:both;
+    text-align:center;
+    margin: 0 auto;
+    background:$white-bkgd;
+}
+
+.microsite-panel-sales {
+  position: relative;
+  width: 100%;
+  cursor:pointer;
+  top:0px;
+  color:$white-bkgd;
+  #quotation_button{
+    margin: 0 auto;
+    float: none;
+  }
+  .scroll-arrow{
+    position: relative;
+    top: 100%;
+    margin-top: -9vw;
+     img{
+       width: 5vw;
+       min-width: 26px;
+     }
+  }
+  .overlay{
+    color: $AcrossMold-blue;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    .vertical-center{
+      position: relative;
+      top: 30%;
+    }
+    .title{
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      @media only screen and (max-width: $screen-xs-max) { font-size: 35px; margin-bottom: 3px; }
+      @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { font-size: 65px; margin-bottom: 10px}
+      @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { font-size: 100px;}
+      @media only screen and (min-width: $screen-md-max+1) { font-size: 130px; }
+      margin-bottom: 20px;
+      text-shadow: $text-outline;
+    }
+    .subtitle{
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      @media only screen and (max-width: $screen-xs-max) { font-size: 17px;  }
+      @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { font-size: 25px; }
+      @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { font-size: 35px;}
+      @media only screen and (min-width: $screen-md-max+1) { font-size: 45px; }
+    }
+  }
+}
+
+.micro-slide-down{
+  width: 100%;
+  z-index: 99;
+}
+
+#promo-video{
+  font-size: 24px;
+  border: 1px solid #ebe9e8;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: #ee572d;
+  cursor: pointer;
+  color: white;
+  padding: 0 30px 0 10px;
+  &:hover{
+    color: darken($white-bkgd, 10%);
+    cursor: pointer;
+  }
+  img{
+    height: 25px;
+    margin-top: 14px;
+    margin-left: 9px;
+  }
+  div{
+    float: left;
+    margin-left: 20px;
+    line-height: 53px;
+  }
+
+}
+
+#promo-modal{
+  padding: 25px;
+  z-index: 999;
+  position: fixed;
+  top: 45%;
+  margin-top: -22vw;
+  left: 50%;
+  margin-left: -42.55vw;
+  width: 85.15vw;
+  height: 47.7vw;
+  overflow: hidden;
+  background-color: $white-bkgd;
+  border-radius: 8px;
+  img{
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -51px;
+    margin-top: -51px;
+  }
+  iframe{
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+  }
+  .ss-delete{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-weight: 300;
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,24 @@
+div#skill-video-slideshow
+	if(skill && skill.skillVideo && skill.skillVideo.length)
+		div.skill-video-area
+
+
+		div.skill-slideshow-subnav
+			div.slide-navigate.left.video(data-slideshow="prev")
+			div.slide-navigate.right.video(data-slideshow="next")
+			span.ss-navigateleft
+			span
+				ul
+					- for (var x = 0; x < skill.skillVideo.length; x++)
+						li.description(class="video-slide-"+x)
+							=skill.skillVideo[x].description
+					- for (var x = 0; x < skill.skillVideo.length; x++)
+						li.counter(class="video-slide-"+x)
+							= (x + 1) +" of " + skill.skillVideo.length
+
+			span.ss-navigateright
+	else
+
+		ul
+			li.video-slide-0.active
+				img(src="images/placeholder_imgs/video_placeholder.jpg", id="slide-placeholder", style="display: block;")

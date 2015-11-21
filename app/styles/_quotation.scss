@@ -1,0 +1,93 @@
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////   Quotation styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+input#quotation_button{
+	margin: 0 auto;
+	float: none;
+	font-size: 18px;
+}
+
+#edit-quotation{
+	.heading{
+		font-size: 30px !important;
+    	opacity: 0.90;
+    	color: $AcrossMold-blue;
+    	text-align: left;
+    	padding: 0;
+    	margin-bottom: 15px;
+	}
+	.row{
+		position: relative;
+		min-height: 45px;
+		text-align: left;
+	}
+	.editing-subtitle{
+		min-width: 90px;
+		padding: 5px 5px 5px 0;
+	}
+	textarea{
+		border: 1px solid darkgray;
+		resize: vertical;
+		min-width: 355px;
+		min-height: 200px;
+	}
+	.modal-title{
+		font-size: 18px;
+		margin: 6px 0 10px 10px;
+		color: gray;
+	}
+	#add-quotation-doc{
+		display: block;
+		color: $AcrossMold-blue;
+		&:hover{ color: darken($AcrossMold-blue, 15)}
+		cursor: pointer;
+		.ss-plus{
+			float: left;
+			margin-top: 1px;
+		}
+		.edit-link{
+			float: left;
+			text-decoration: underline;
+		}
+	}
+	#quote-attachments{
+		border: 1px solid darkgray;
+		color: lighten(gray,20);
+		min-height: 30px;	
+		font-style: italic;
+		font-size: 12px;
+		line-height: 30px;	
+		overflow-x: auto;
+		input#quotation_file{ display: none; }
+		#quotation_file_btn{ 
+		    margin: 5px 0;
+		    height: 23px;
+		    text-align: center;
+		    width: 86px;
+		    font-size: 13px;
+		    padding: 3px;
+		    line-height: 17px;
+		    display: inline-block;
+		}
+		.attached-file{
+			color: black;
+			font-size: 15px;
+			font-style: normal;
+		}
+		.even{
+			background-color: lighten($AcrossMold-blue, 50)
+		}
+		.quote-file-remove{
+			margin-left: 5px;
+			color: $AcrossMold-blue;
+			text-decoration: underline;
+			cursor: pointer;
+			&:hover{ color: darken($AcrossMold-blue, 20)}
+		}
+	}
+	
+}

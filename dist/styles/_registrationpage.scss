@@ -1,0 +1,220 @@
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  registration sign up view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+.registration-master {
+  margin-top: 50px;
+  padding: 0 10px;
+  // min-height: 1200px;
+  // border: 1px solid red;
+  h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: $title-color-secondary;
+
+    @media only screen and (max-width: $screen-xs-max) {
+      font-size: 20px;
+    }
+  }
+  &.wrapper{
+    max-width: 950px;
+    margin: 50px auto;
+  }
+
+}
+
+// .chosen-container {
+//   width: 100px !important;
+// }
+
+#registration-confirm-mobile {
+   p{
+      font-size: 14px;
+      text-align: left;
+   }
+}
+
+.registration-page-1 {
+  position: relative;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.about-inputs {
+  position: relative;
+}
+.gender-area {
+  width: 140px;
+  position: absolute;
+  right: 90px;
+  bottom: 30px;
+}
+.registration-form-1 {
+
+  max-width: 500px;
+  margin: 0 auto;
+  background: $white-bkgd;
+  padding: 25px;
+  @media only screen and (max-width: $screen-xs-max) {
+     padding: 10px;
+     font-size: 12px;
+     input{ width: 45%; }
+  }
+
+  input {
+    width: 40%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.terms-of-service {
+  input {
+    width: auto;
+    height: auto;
+
+  }
+  .terms-text {
+    color: $title-color-secondary;
+    font-weight: 300;
+    margin-left: 5px;
+  }
+}
+.registration-button {
+  float: right;
+  width: 180px;
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  background: $title-color-secondary;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  &:hover {
+    background: darken($title-color-secondary, 5%);
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  registration select profile view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+.profile-selection-container {
+  width: 100%;
+  height: 200px;
+  background: $white-bkgd;
+  padding: 5px;
+  padding-top: 10px;
+  position: relative;
+}
+.profile-selection-buttons{
+  width: 915px;
+  position: relative;
+  margin: 0 auto;
+}
+.profile-button {
+  width: 173px;
+  height: 80px;
+  background: $more-dulled-bkgd;
+  // display: inline;
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 4px;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background: $title-color-secondary!important;
+    opacity: 0.7;
+  }
+}
+
+.selected-profile {
+  background: $title-color-secondary!important;
+  opacity: 1!important;
+}
+
+.profile-selection-desc {
+  // margin-top: 20px;
+  position: absolute;
+  bottom: 40px;
+  left: 95px;
+  // padding-top: 120px;
+  width: 770px;
+  display: none;
+  height: 40px;
+  text-align: center;
+  // margin: 0 auto;
+
+}
+
+#default-desc {
+  display: block;
+}
+
+#submit-registration-3, #create-new-profile {
+  width: 200px;
+  color: #fff;
+  font-size: 16px;
+  background: $title-color-secondary;
+  margin-bottom: 20px;
+  &:hover {
+    background: darken($title-color-secondary, 5%);
+  }
+}
+
+.continue-button-section {
+  text-align: right;
+  margin-top: 20px;
+  .red-text {
+    color: $title-color-secondary;
+    font-weight: 300;
+    margin-right: 20px;
+  }
+}
+
+.underage-warning {
+  background: $title-color-secondary;
+  color: #fff;
+  width: 110%;
+  margin-left: -5%;
+  height: auto;
+  padding: 10px;
+  display: none;
+
+}
+.underage-headline {
+  font-size: 20px;
+  color: #fff ;
+}
+.underage-subtext{
+  font-size: 12px;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  registration upload profile pic view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+.registration-page-2 {
+
+}
+
+.user-image-preview {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}

@@ -1,0 +1,35 @@
+div.edit-photo
+	span#skill-photo-edit-icon.ss-write.edit-icon.skill-element-icon
+div#skill-photo-slideshow
+
+	if(skill && skill.skillPhotos && skill.skillPhotos.length)
+
+		ul
+			- for (var x = 0; x < skill.skillPhotos.length; x++)
+				li(class="photo photo-slide-"+x, data-index=x)
+					img(src=skill.skillPhotos[x].photoUrl)
+
+		div.skill-slideshow-subnav
+			div.slide-navigate.left.photo(data-slideshow="prev")
+			div.slide-navigate.right.photo.edit(data-slideshow="next")
+			div.ss-navigateleft
+			div
+				ul
+					- for (var x = 0; x < skill.skillPhotos.length; x++)
+						li(class="description photo-slide-"+x)
+							=skill.skillPhotos[x].photoDesc
+
+			div
+				ul
+					- for (var x = 0; x < skill.skillPhotos.length; x++)
+						li(class="counter edit photo-slide-"+x)
+							= (x + 1) +" of " + skill.skillPhotos.length
+			div.ss-navigateright.edit
+			div(class="plus-border")
+			div(class="ss-plus edit photo", id="add-skill-photo")
+
+	else
+
+		ul
+			li.photo-slide-0.active
+				img(src="images/placeholder_imgs/gallery_placeholder.jpg", id="slide-placeholder", style="display: block;")

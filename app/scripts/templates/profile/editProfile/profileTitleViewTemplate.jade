@@ -1,0 +1,177 @@
+div.row
+  div.col-lg-2.col-md-0
+  div.title-area.col-lg-8.col-md-12
+    div.milestone-bar
+      div#editor-title.left-title
+        case profile.profileType
+          when "_3d_printing"
+            |3D Printing Profile Editor
+          when "injection_molding"
+            |Injection Molding Profile Editor
+          when "metal_die_casting"
+            |Metal Die Castin Profile Editor
+          when "cnc_machining"
+            |CNC Machining Profile Editor
+          when "other"
+            |Other Services Profile Editor
+          default
+            |Profile Editor
+
+      div.right-progress-bar-container
+        div.progress-bar
+        div.progress-text
+          span.percentage-complete 0
+          |% complete
+
+      div#publish-status.hidden-xs
+
+div.row
+  div.col-lg-2.col-md-0
+  div.title-area.col-lg-8.col-md-12
+    div.title-content
+      div.left-title.edit
+        //- empty on first arriving, populated via #profileName modal field
+        span.title-name
+          if profile.profileName && profile.profileName.length
+            =profile.profileName
+          else
+            | Profile name
+        &nbsp;
+        //- loop through orgs and print em...needs to accomodate for org lists > 3
+        span.title-orgs
+          if profile.profileType == 'business' || profile.profileType == 'venue'
+            if profile.certifications.length == 0
+              | Certifications
+              - for (var x = 0; x < profile.certifications.length; x++)
+                =profile.certifications[x]
+                if (x < profile.certifications.length-1)
+                  ="/"
+          else
+            if profile.organizations && profile.organizations.length == 0
+              | Equity/Union
+              - for (var x = 0; x < profile.organizations.length; x++)
+                =profile.organizations[x]
+                if (x < profile.organizations.length-1)
+                  ="/"
+        span(class="ss-write edit-icon title-section-icon open-modal", data-toggle="tooltip", data-openmodal="titleSectionEdit")
+
+
+
+      div.user-tags.hidden-xs
+        span.title Tags:&nbsp;
+        if profile.tags && profile.tags.length > 0
+          - for (var x = 0; x < profile.tags.length; x++)
+              if (x == profile.tags.length - 1)
+                =profile.tags[x]
+              else
+                =profile.tags[x] + ", "
+
+
+       div.right-title
+         div.contact-links
+          input(type='button',class="contact-button button-alt core-button open-modal", id="contact-profile-edit", value="Contact/Share", data-openmodal="contact-edit-modal")
+          div(class="ss-write edit-icon contact-edit-icon contact-edit position open-modal", data-toggle="tooltip", data-openmodal="contact-edit-modal")
+
+    div(class="popover contactinput", id="contact-edit-modal")
+        span(class="ss-delete close-modal", data-closemodal="contact-edit-modal")
+        input(type="button", id='contact-done', class="close-modal contact-done button-alt", value="Done")
+        div.contactemail.profile-title
+          |Edit Profile Settings for &nbsp;
+          =profile.profileName
+
+        div.contact-subtitle
+          |Contact Email
+        div.contact-right
+          input(class="contactbox", type="text", placeholder="example@email.com", id="prof-email", value=profile.profileContactEmail)
+
+        div.contact-subtitle
+          |Privacy
+        div.contact-right
+          select(class="privacy-select contactbox", data-placeholder="Private or Public?", id="prof-privacy", style="width: 350px;")
+            if profile.profilePublished
+              option Private
+              option(selected) Public
+            else
+              option(selected) Private
+              option Public
+
+        div.contact-subtitle
+          |Profile URL
+        div.contact-right
+          if (profile.profileCustomUrl && profile.profileCustomUrl.length)
+            input(class="contactbox", type="text", placeholder="Create custom profile address", id="prof-url", value=decodeURIComponent(profile.profileCustomUrl))
+          else
+            input(class="contactbox", type="text", placeholder="Create custom profile address", id="prof-url")
+        div.contact-subtitle.final-url
+          if (profile.profileCustomUrl && profile.profileCustomUrl.length)
+            |www.across-mold.com/#/
+            =profile.profileCustomUrl
+          else
+            |www.across-mold.com/#/customUrl
+
+        input(type="button", class="button-link open-modal", value="Delete this profile", data-openmodal="profile-delete-modal")
+
+
+
+    //- delete profile
+
+  div#profile-delete-modal.confirm-delete.popover
+      span(class="confirm-delete-subtitle")
+        ="Are you sure you want to delete the "
+        =profile.profileType
+        =" profile for "
+        =profile.profileName
+        ="?"
+      br
+      br
+      input(type="button", id="delete-profile-confirm", class="button-alt core-button confirm-delete-button", value="Yes")
+      input(type="button", class="button-alt core-button confirm-delete-button close-modal", value="No", data-closemodal="profile-delete-modal")
+
+
+
+  //---------------- profile title edit modal thing
+
+  div(class="popover title-area-edit", id="titleSectionEdit")
+    div.title-edit-top
+      span(class="ss-delete close-modal", data-closemodal="titleSectionEdit")
+      div.editing-title Edit Header Information
+      br
+      div.editing-subtitle
+        if (profile.profileType == "business" || profile.profileType == "venue")
+          |Add your certifications, and add tags to your profile.
+        else
+          |Add your equity or union, and add tags to your profile.
+    br
+    div.title-edit-top
+      div.editing-title Profile Name
+      input.edit-profile-name(type="text", maxlength=35, placeholder="Enter name for this profile", value=profile.profileName)
+    hr
+    div.title-edit-mid-left
+      div.editing-title Tags
+      br
+      div.editing-subtitle
+        |Tags help other users find your profile.
+      textarea(data-placeholder="Enter some tags", class="chosen-select tags-select", multiple="multiple")
+
+    div.title-edit-mid-right
+      if (profile.profileType == "business" || profile.profileType == "venue")
+        div.editing-title Certifications
+        br
+        div.editing-subtitle
+          |No certifications? Leave this area blank and it won't show up on your profile.
+        textarea(data-placeholder="Choose your certifications", class="chosen-select certification-select", multiple="multiple")
+      else
+        div.editing-title Equity/Union
+        br
+        div.editing-subtitle
+          |Aren't part of one? Leave this area blank and it won't show up on your profile.
+        textarea(data-placeholder="Choose your equity", class="chosen-select equity-union-select", multiple="multiple")
+
+    div.title-save-buttons
+      input(type="button", class="button-alt greenbutton", value="Done", id="save-title-info")
+      input(type="button", class="button-link close-modal", data-closemodal="titleSectionEdit", value="Cancel")
+
+
+
+
+//- ---------------------------------------------------------------------------------------

@@ -1,0 +1,5 @@
+if (profile.profileFeatures)
+  ul
+    -for(key in Mi.CMS[profile.profileType].attributes)
+      -var value = profile.profileFeatures[key] ? profile.profileFeatures[key] : ''
+      li= Mi.CMS.labels[key] + ": " + value

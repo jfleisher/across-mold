@@ -1,0 +1,37 @@
+ddiv.account-settings(class="popover", id="account-settings-modal")
+	div(class="ss-delete close-modal", data-target=".account-settings", data-closemodal="account-settings-modal")
+	br
+	div.main.title Edit account settings
+
+	div.edit-line
+		div.editing-subtitle Account name
+		input(class="settings firstname", type="text", placeholder="First Name", id="acntfirst", value=user.firstName)
+		input(class="settings lastname", type="text", placeholder="Last Name", id="acntlast", value=user.lastName)
+
+	div.edit-line
+		div.editing-subtitle Account email
+		input(class="settings email", type="email", placeholder="Email", id="acntemail", value=user.email)
+
+	div.edit-line
+		div.editing-subtitle Change password
+		input#acct-new-password(class="settings password", type="password", placeholder="enter new password")
+		br
+		input#acct-confirm-password(class="settings password", type="password", placeholder="confirm password")
+
+	div.update-buttons
+		input.visible-xs#delete-account(type="button", class="button-link", value="Delete")
+		input.hidden-xs#delete-account(type="button", class="button-link", value="Delete Account")
+		input#save-account-settings(type="button", class="button-alt greenbutton", value="Save")
+		input.hidden-xs(type="button", class="button-link close-modal", data-closemodal="account-settings-modal", value="Cancel")
+
+
+div#confirm-delete-modal(class="popover")
+	span.ss-delete(class="close-modal", data-closemodal="confirm-delete-modal")
+	|WARNING: If you delete your account it cannot be recovered.
+	br
+	br
+	|We recommand disabling all profiles with the link below to exclude them from. Disabling your profiles will retained them for future use.
+	div.update-buttons
+		input#disable-profiles(type="button", class="button-link", value="Disable")
+		input#delete-account-confirmed(type="button", class="button-alt core-button", value="Delete")
+		input(type="button", class="button-link close-modal", data-closemodal="confirm-delete-modal", value="Cancel")

@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "AcrossMold": {
+            "applicationId": "q8RSB55zBX88cv27GWzRjXLHX3Ijk8haCfhIGbEH",
+            "masterKey": "H3klEp1w395F5iEVkEVUfjPHigQDgxiWJ218rh2v"
+        },
+        "_default": {
+            "link": "AcrossMold"
+        }
+    },
+    "global": {
+        "parseVersion": "1.2.16"
+    }
+}

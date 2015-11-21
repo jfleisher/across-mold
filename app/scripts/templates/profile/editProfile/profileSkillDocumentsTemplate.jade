@@ -1,0 +1,46 @@
+div#edit-document
+	span#skill-document-edit-icon.ss-write.edit-icon.skill-element-icon
+div#skill-document-slideshow
+
+	if(skill && skill.skillDocuments && skill.skillDocuments.length)
+
+		ul
+			- for (var x = 0; x < skill.skillDocuments.length; x++)
+				li(class="document document-slide-"+x, data-index=x)
+					div.document-slide
+						img.document-slide(src="images/document.jpg")
+						div.title
+							= skill.skillDocuments[x].title
+						div.description
+							= skill.skillDocuments[x].desc
+						div.download
+							a.download(href=skill.skillDocuments[x].url, download="document", target="makeitglobal_document")
+								if skill.skillDocuments[x].name && skill.skillDocuments[x].name.length
+									=skill.skillDocuments[x].name
+								else
+									|Download
+
+
+		div.skill-slideshow-subnav
+			div.slide-navigate.left.document(data-slideshow="prev")
+			div.slide-navigate.right.document.edit(data-slideshow="next")
+			div.ss-navigateleft
+			div
+				ul
+					- for (var x = 0; x < skill.skillDocuments.length; x++)
+						li(id="document-title-"+x, class="description document-slide-"+x)
+							=skill.skillDocuments[x].title
+			div
+				ul
+					- for (var x = 0; x < skill.skillDocuments.length; x++)
+						li(id="document-counter-"+x, class="counter edit document-slide-"+x)
+							= (x + 1) +" of " + skill.skillDocuments.length
+			div.ss-navigateright.edit
+			div.plus-border
+			div.ss-plus.document.edit#add-skill-document
+
+	else
+
+		ul
+			li.document-slide-0.active
+				img(src="images/placeholder_imgs/doc_placeholder.jpg", id="slide-placeholder", style="display: block;")

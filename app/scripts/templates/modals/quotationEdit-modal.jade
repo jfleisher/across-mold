@@ -1,0 +1,54 @@
+div#edit-quotation-modal.row.popover.col-lg-6.col-lg-offset-3.col-md-8.col-lg-offset-2.col-xs-10.col-xs-offset-1
+	div(class="ss-delete close-modal", data-target=".edit-quotation", data-closemodal="edit-quotation-modal")
+	br
+	div.main.title.row.col-xs-10 Get A Quotation
+	br
+	br
+	div.edit-line.row
+		div.editing-subtitle.col-xs-2.col-xs-offset-1 Your name
+		input#quote_contact_name.col-xs-6(class="settings personname", type="text", placeholder="enter your name", value=contactName)
+
+	div.edit-line.row
+		div.editing-subtitle.col-xs-2.col-xs-offset-1 E-mail
+		input#quote_email.col-xs-6(class="settings email", type="email", placeholder="enter email address", value=contactEmail)
+
+	div.edit-line.row
+		div.editing-subtitle.col-xs-2.col-xs-offset-1 Company
+		input#quote_company_name.col-xs-6(class="settings companyname", type="text", placeholder="enter the name of your company", value=companyName)
+
+	div.edit-line.row
+		div.editing-subtitle.col-xs-2.col-xs-offset-1 Job Name
+		input#quote_job_name.col-xs-8(class="settings jobname", type="text", placeholder="enter a job name or title", value=jobTitle)
+
+	div.edit-line.row
+		div.editing-subtitle.row.col-xs-10.col-xs-offset-1 Job Description
+		textarea#quote_job_details.row.col-xs-10.col-xs-offset-1(class="settings jobdetails", type="text",  rows="10", placeholder="enter a detailed job description", value=jobDescription)
+
+	div.edit-line.row
+		div.editing-subtitle.row.col-xs-10.col-xs-offset-1 Attachments - design documents, CAD drawings, supporting material
+	br
+	br
+	br
+	br
+	br
+	div.row.update-buttons
+		input.visible-xs#quote_submit(type="button", class="button-alt greenbutton", value="Send")
+		input.hidden-xs#quote_submit(type="button", class="button-alt greenbutton", value="Send Request")
+		input.hidden-xs(type="button", class="button-link close-modal", data-closemodal="account-settings-modal", value="Cancel")
+
+
+div#quotation-remove-document-modal(class="popover")
+	span.ss-delete(class="close-modal", data-closemodal="quotation-remove-document-modal")
+	|Are you sure you want to remove this document? 
+	div.update-buttons
+		input#confirm-remove(type="button", class="button-link", value="Confirm")
+		input(type="button", class="button-link close-modal", data-closemodal="quotation-remove-document-modal", value="Cancel")
+
+div#quotation-add-document-modal(class="popover")
+	span.ss-delete(class="close-modal", data-closemodal="quotation-add-document-modal")
+	|Browse to select file
+	br
+	input#quotation_file(type="file", class="quotation-upload", accept="*")
+	div.update-buttons
+		input#upload-quotation-file(type="button", class="button-alt core-button", value="Upload")
+		input(type="button", class="button-link close-modal", data-closemodal="quotation-add-document-modal", value="Cancel")

@@ -1,0 +1,1907 @@
+/*__ _ _                                    _        _
+ _____  _____   ____  _____  _____ _      ______  _____         _____ ______
+|  __ \|  __ \ / __ \|  ____|_  _| |    |  ____| |  __ \ /\   / ____|  ____|
+| |__) | |__) | |  | | |__   | | | |    | |__    | |__) /  \ | |  __| |__
+|  ___/|  _  /| |  | |  __|  | | | |    |  __|   |  ___/ /\ \| | |_ |  __|
+| |    | | \ \| |__| | |    _| |_| |____| |____  | |  / ____ \ |__| | |____
+|_|    |_|  \_\\____/|_|   |_____|______|______| |_| /_/    \_\_____|______|
+
+
+*/
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  profile master view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.profile-master {
+  @media only screen and (max-width: $screen-md-max){
+    padding: 0 10px;
+  }
+}
+
+.heading-area {
+  border-radius: 8px;
+  position: relative;
+}
+
+.attributes-area {
+  width: 100%;
+  min-height: 500px;
+  text-align: left;
+  position: relative;
+}
+.attributes-placeholder{
+  padding-right: 30px;
+  padding-bottom: 55px;
+  height: 100%;
+}
+.skill-area {
+   @media only screen and (max-width: $screen-xs-max) { padding-top: 20px; padding-bottom: 20px;}
+   @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { padding-top: 30px; padding-bottom: 55px; }
+   @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { padding-top: 45px; padding-bottom: 55px; }
+   @media only screen and (min-width: $screen-md-max+1) { padding-top: 65px; padding-bottom: 55px; }
+   min-height: 500px;
+}
+
+#skill-summary-icon{
+  position: absolute;
+  top: 0;
+  left: 87px;
+}
+
+.portrait-location{
+   text-align: left;
+   margin-bottom: 25px;
+   font-size: 14px;
+   a{
+     color: darkgray;
+     text-decoration: underline;
+     &:hover{
+       color: darkblue;
+     }
+   }
+}
+
+#videoplayer,
+#player,
+.player{
+  z-index: 9!important;
+}
+
+.video-loading{
+  background: url(../images/loading-orange.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  float: left;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  top: 40%;
+  margin-top: -25px;
+  z-index: -1;
+}
+
+.profile-subtitle {
+  color: $AcrossMold-blue;
+  font-size: 18px;
+  margin-bottom: 10px;
+  span {
+    float: right;
+    margin-right: 35px;
+  }
+
+}
+.profile-title {
+  color: $AcrossMold-blue;
+  font-size: 22px;
+  margin-bottom: 10px;
+
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  profile title view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+.title-name {
+  @media only screen and (max-width: $screen-xs-max) { font-size: 25px; line-height: 32px; clear: both; }
+  @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { font-size: 19px; line-height: 24px; }
+  @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { font-size: 22px; line-height: 27px;}
+  @media only screen and (min-width: $screen-md-max+1) { font-size: 25px; line-height: 30px; }
+
+  font-weight: 500;
+  color: $AcrossMold-blue;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media only screen and (max-width: $screen-xs-max) { float: left; clear: both; }
+}
+
+.title-orgs {
+  font-size: 18px;
+  color: $AcrossMold-blue;
+  @media only screen and (max-width: $screen-xs-max) { float: left; clear: both; }
+}
+
+.left-title {
+  float: left;
+  vertical-align: bottom;
+  max-width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &.edit{ overflow: visible; }
+}
+
+.right-title {
+  margin-top: -30px;
+  float: right;
+  div{
+    display: inline-block;
+  }
+}
+
+
+.user-tags {
+  color: #8d897d;
+  text-align: left;
+  font-size: 14px;
+  float: left;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  clear: left;
+  max-height: 38px;
+  @media only screen and (max-width: $screen-xs-max) { max-width: 100%; }
+  @media only screen and (min-width: $screen-xs-max+1) { max-width: 60%; }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 19px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  .title {
+    color: darken($subdued-text, 20%);
+    width: auto;
+  }
+  a{
+    color: darkgray;
+    text-decoration: underline;
+    &:hover{
+      color: darkblue;
+    }
+  }
+}
+
+.skill-indicator {
+  display: inline-block;
+  width: 135px;
+  height: 50px;
+  background: $white-bkgd;
+  border-radius: 5px;
+  border: 1px solid $gray-border;
+  color: $title-color-secondary;
+  font-weight: 300;
+  font-size: 18px;
+  //this padding might cause later issues
+  padding: 15px;
+}
+
+.ss-star {
+  color: $subdued-text;
+}
+
+.contact-links {
+  float: right;
+  position: relative;
+  @media only screen and (max-width:$screen-xs-max) { width: 100%; }
+  a{
+    margin-right: 0px;
+    font-weight: 500;
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  profile heading view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+.sub-heading-nav {
+  position: relative;
+
+  @media only screen and (max-width:$screen-xs-max) {
+     font-size: 13px;
+     margin-top: -11px;
+     height: 35px;
+     line-height: 35px;
+  }
+  @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) {
+     font-size: 13px;
+     height: 35px;
+     margin-top: -11px;
+     line-height: 35px;
+  }
+  @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) {
+     font-size: 15px;
+     height: 40px;
+     margin-top: -11px;
+     line-height: 40px;
+  }
+  @media only screen and (min-width: $screen-md-max+1) {
+     font-size: 17px;
+     height: 50px;
+     margin-top: -10px;
+     line-height: 50px;
+  }
+
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background: $skill-tab-header;
+  color: $photo-subtitle-text;
+  font-weight: 400;
+
+
+  .skills-heading {
+    @media only screen and (max-width: 600px) { display: none;}
+    color: $white-bkgd;
+    float: left;
+    margin-left: 10px;
+  }
+  .skill-button-container{
+     height: 100%;
+     float: right;
+     .skill-button.add-skill {
+       width: 45px;
+     }
+     .skill-button {
+       position: relative;
+       height: 100%;
+       border-left: 1px solid #000;
+       float: right;
+       position: relative;
+       color: $photo-subtitle-text;
+
+       .skill-text {
+         float: left;
+         text-align: center;
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         cursor: pointer;
+         padding: 0px 7px;
+         width: 100%;
+         &:hover{ text-decoration: underline; }
+       }
+
+       &.active, &:hover{
+         color: $title-color-secondary;
+       }
+       &.active.edit{
+         padding-right: 20px;
+         .ss-write{
+           position: absolute;
+           right: 3px;
+           top: 0;
+           z-index: 99;
+         }
+       }
+    }
+  }
+}
+
+
+
+// apply this class to active skill for displaying button triangle do-hickeys
+
+.active {
+  .inner:after {
+    border: 1px solid #ffffff;
+    border-bottom-width: 10px;
+    border-top-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-color: $photo-subtitle-opaque transparent transparent transparent;
+    position: absolute;
+    bottom: -20px;
+    left: 40%;
+    z-index: 99;
+  }
+  a {
+    color: $title-color-secondary !important;
+  }
+}
+
+.cover-photo {
+  position: relative;
+  background: $subdued-text;
+  overflow:hidden;
+  border-radius: 8px;
+  img {
+    width: 100%;
+    margin:-10px -10px -10px -10px;
+  }
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  profile attributes view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+.profile-subtitle{
+  position: relative;
+  text-align: left;
+}
+.attributes-location{
+  position: relative;
+  text-align: left;
+  bottom:0;
+  width: 100%;
+}
+
+
+.attributes-features {
+  min-height: 200px;
+  margin-bottom: 60px;
+  li {
+    font-weight: 300;
+    color: $darker-text;
+    line-height: 20px;
+    font-size: 14px;
+  }
+}
+
+.location-map {
+  width: 100%;
+  border: 1px solid $gray-border;
+  border-radius: 8px;
+  img {
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
+
+.attributes-photo {
+  width: 160px;
+  height: 160px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
+  position: relative;
+  span.ss-write{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  profile skill view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+.skill-summary {
+  &.view{
+    max-height: 146px;
+    height: auto;
+    @media only screen and (max-width: $screen-xs-max) { margin-top: 10px; margin-bottom: 20px; font-size: 13px; max-height: none;}
+    @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { margin-top: 15px; margin-bottom: 35px; font-size: 14px; }
+    @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { margin-top: 25px; margin-bottom: 55px; font-size: 16px;}
+    @media only screen and (min-width: $screen-md-max+1) { margin-top: 25px; margin-bottom: 55px; font-size: 16px; }
+  }
+  width: 100%;
+  height: 146px;
+  word-wrap: break-word;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+
+.skill-element-container {
+  position: relative;
+}
+
+.tab-element {
+  display: none;
+
+}
+.active {
+  display: block;
+}
+
+.tab-element{ margin-top: -20px; }
+.tab-navigation {
+  width: 100%;
+
+  @media only screen and (max-width: $screen-xs-max) { height: 35px; line-height: 35px; font-size: 13px; }
+  @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { height: 40px; line-height: 40px; font-size: 15px;}
+  @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { height: 50px;  line-height: 50px; font-size: 16px;}
+  @media only screen and (min-width: $screen-md-max+1) { height: 60px;  line-height: 60px; font-size: 17px;}
+
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background: $skill-tab-header;
+  color: $photo-subtitle-text;
+
+
+  .tab-button{
+    &:last-of-type { border-left: none; }
+    border-left: 1px solid #000;
+    width: 33%;
+    float: right;
+    position: relative;
+    text-align: center;
+    font-weight: 400;
+    height: 100%;
+    cursor: pointer;
+    color: $photo-subtitle-text;
+    &.active{color: $title-color-secondary;}
+    &:active{color: $title-color-secondary;}
+    &:hover{color: $title-color-secondary; text-decoration: underline;}
+    margin: 0 auto;
+  }
+
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  profile skill view styles -- slideshow thing
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+#skill-audio-player,
+#skill-video-slideshow,
+#skill-document-slideshow,
+#skill-photo-slideshow {
+  // border: 1px solid red;
+  width: 100%;
+  //height: 430px;
+  position: relative;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  .skill-video-area{
+    width: 100%;
+    height: 360px;
+    iframe{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  li{
+    display: none;
+    width: 100%
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 100%;
+  }
+  .active {
+    display: inline-block !important;
+  }
+  div.title{
+    position: relative;
+    margin-top: 4%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: default;
+    font-size: 30px;
+    line-height: 40px;
+    @media only screen and (max-width: $screen-xs-max) { line-height: 20px; font-size: 15px; }
+    @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { line-height: 25px; font-size: 18px; }
+    @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { line-height: 35px; font-size: 25px; }
+    @media only screen and (min-width: $screen-md-max+1) { line-height: 40px; font-size: 30px;}
+  }
+
+  div.description{
+    cursor: default;
+    position: relative;
+    margin: 10% auto;
+    width: 90%;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    @media only screen and (max-width: $screen-xs-max) { height: 60px; line-height:15px; font-size: 13px; }
+    @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { height: 80px; line-height: 18px; font-size: 15px; }
+    @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { height: 100px; line-height: 19px; font-size: 16px; }
+    @media only screen and (min-width: $screen-md-max+1) { height: 130px; line-height: 22px; font-size: 18px;}
+  }
+
+  div.download{
+    position: relative;
+    margin: 10% auto;
+    font-weight: bold;
+    width: 90%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    text-decoration: underline;
+    @media only screen and (max-width: $screen-xs-max) { line-height: 20px; font-size: 16px;}
+    @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { line-height: 20px; font-size: 16px; }
+    @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { line-height: 22px; font-size: 18px; }
+    @media only screen and (min-width: $screen-md-max+1) { line-height: 24px; font-size: 20px;}
+  }
+  .skill-slideshow-subnav{
+    width: 100%;
+    position: absolute;
+    display: table-cell;
+    vertical-align: middle;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:$photo-subtitle;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    @media only screen and (max-width: $screen-xs-max) { height: 35px; line-height: 35px; font-size: 13px; }
+    @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { height: 40px; line-height: 40px; font-size: 15px;}
+    @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { height: 50px;  line-height: 50px; font-size: 16px;}
+    @media only screen and (min-width: $screen-md-max+1) { height: 60px;  line-height: 60px; font-size: 17px;}
+
+
+    .active {
+      display: inline-block !important;
+    }
+    .description {
+      position: absolute;
+      left: 5vw;
+      color: #cbc5c0;
+      max-width: 70%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+    }
+    .counter{
+      position: absolute;
+      right: 45px;
+      max-width: 25%;
+      color: #cbc5c0;
+      text-align: right;
+      &.edit{ right: 80px; }
+    }
+    .title {
+      font-size: 20px;
+      font-style:bold;
+      color: $pale-green;
+      top:0px;
+      left:0px;
+      padding:30px;
+      position:absolute;
+      width:681px;
+      white-space:normal;
+      word-break:break-all;
+      height:360px;
+      overflow-y:auto;
+    }
+    .download {
+      margin:10px 45%;
+    }
+    .slide-navigate{
+      position: absolute;
+      height: 100%;
+      width: 30%;
+      top: 0;
+      z-index: 998;
+      cursor: pointer;
+      &.left{ left: 0; }
+      &.right{ right: 0; &.edit{ right: 42px; } }
+    }
+
+    .ss-navigateright {
+     cursor: pointer;
+     position: absolute;
+     color: #ee572d;
+     right: 0;
+     text-align: right;
+     min-width: 40px;
+     &.left { left: 0; }
+     &.edit { right: 42px; }
+     @media only screen and (max-width: $screen-xs-max) { height: 42px; line-height: 42px; font-size: 25px; }
+     @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { height: 40px; line-height: 48px; font-size: 30px;}
+     @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { height: 50px;  line-height: 61px; font-size: 40px;}
+     @media only screen and (min-width: $screen-md-max+1) { height: 60px;  line-height: 72px; font-size: 50px;}
+  }
+
+  .ss-navigateleft {
+     cursor: pointer;
+     position: absolute;
+     color: #ee572d;
+     left: 0;
+     text-align: left;
+     min-width: 40px;
+     @media only screen and (max-width: $screen-xs-max) { height: 42px; line-height: 42px; font-size: 25px; }
+     @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { height: 40px; line-height: 48px; font-size: 30px;}
+     @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { height: 50px;  line-height: 61px; font-size: 40px;}
+     @media only screen and (min-width: $screen-md-max+1) { height: 60px;  line-height: 72px; font-size: 50px;}
+  }
+
+  .ss-plus.edit {
+     cursor: pointer;
+     position: absolute;
+     right: 0;
+     font-size: 42px;
+     color: $inactive-text;
+   }
+   .plus-border {
+     height: 100%;
+     border-left: 1px solid #000;
+     width: 5px;
+     float: right;
+     position: relative;
+     text-align: center;
+     margin-right: 41px;
+   }
+
+
+ }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  profile edit view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.ss-write.edit-icon {
+  font-size: 20px;
+  color: $inactive-text;
+  cursor: pointer;
+}
+
+.ss-delete.edit-icon {
+  font-size: 23px;
+  color: $inactive-text;
+  cursor: pointer;
+}
+.ss-plus.edit-icon {
+  font-size: 20px;
+  color: $inactive-text;
+  cursor: pointer;
+}
+
+.contact-icon{
+    left:660px;
+    top:58px;
+    position:absolute;
+    z-index:1000;
+}
+
+
+#profilePicturePreview {
+  img{
+    width: 160px;
+  }
+  .ci-image-wrapper{
+      img{
+        border-radius: 0;
+      }
+  }
+  .ci-fixing-position{
+    display: none;
+  }
+  .ci-tool{
+    top: 30px;
+  }
+}
+#imgUpload {
+  float: left;
+  clear: left;
+  width: 160px;
+  height: 20px;
+
+}
+
+
+.profile-attributes-section {
+  clear: both;
+}
+
+#add-skill {
+  cursor: pointer;
+  line-height: 100%;
+  @media only screen and (max-width: $screen-xs-max) { font-size: 25px; margin-top: 8px;}
+  @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-xs-max+1) { font-size: 30px; margin-top: 7px;}
+  @media only screen and (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) { font-size: 35px; margin-top: 9px;}
+  @media only screen and (min-width: $screen-md-max+1) { font-size: 40px; margin-top: 10px;}
+}
+
+#add-photo,
+#add-document{
+  cursor: pointer;
+}
+
+#welcome-modal{
+  text-align: left;
+  #profileName{
+    line-height: 23px;
+  }
+}
+.modal-footer {
+  clear: both;
+  div {
+    float: left;
+  }
+}
+
+.modal-body {
+  input[type="text"], input[type="email"] {
+    width: 300px;
+    margin: 20px 0;
+    font-size: 18px;
+    clear: both;
+  }
+  input{
+    clear: left;
+  }
+  .profile-caption {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: $subdued-text;
+    line-height: 20px;
+  }
+  .venue-label {
+    margin-top:  -65px;
+    margin-left: 5px;
+    font-size: 14px;
+    color: $subdued-text;
+  }
+}
+
+
+.skill-summary-input {
+  width: 300px;
+  height: 70px;
+  box-sizing: border-box;
+  border: 2px solid $gray-border;
+  border-radius: 4px;
+  box-shadow: none;
+  background: $input-bkgd;
+  padding-left: 10px;
+
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  profile edit view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+.popover {
+  position: absolute;
+  // display: none;
+  border-radius: 8px;
+  box-shadow: -2px -2px 2px #000,
+              2px 2px 3px #000,
+              2px 3px 8px #000;
+  display: none;
+  z-index: 999;
+}
+.title-area{
+  position: relative;
+}
+
+.title-content{
+  margin-top: 30px;
+}
+.title-area-edit{
+  width: 800px;
+  height: 420px;
+  z-index: 999;
+  background: $white-bkgd;
+  padding: 20px;
+  top: 100px;
+  left: 50%;
+  margin-left: -400px;
+  hr {
+    margin: -10px 10px 18px 10px;
+  }
+}
+
+.headline-area-edit {
+  width: 1000px;
+  height: 565px;
+  z-index: 999;
+  background: $white-bkgd;
+  padding: 20px;
+  position: relative;
+}
+.headline-im-icon {
+  top: 10px !important;
+}
+#headlinePhotoPreview {
+  margin-top: 5px;
+  height: 250px;
+  width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+#headlinePhotoEdit {
+  position: absolute;
+  left: 50%;
+  margin-left: -325px;
+  top: 150px;
+  height: 450px;
+  width: 650px;
+}
+
+.headline-photo-placeholder {
+  width: 100%;
+}
+
+.headline-image-container {
+  border-radius: 8px;
+  // border: 1px solid red;
+  // width: 960px;
+  height: 100%;
+  margin: 0 auto;
+}
+.hidden{
+  display: none;
+}
+.headline-image-preview-container{
+  border-radius: 8px;
+  // border: 1px solid red;
+  // width: 960px;
+  // height: 100%;
+  margin: 0 auto;
+}
+
+
+.vertical-divider {
+  height: 400px;
+  width: 2px;
+  position: absolute;
+  left: 50%;
+  z-index: 999;
+  background: #000;
+}
+
+.ss-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 999;
+  line-height: 25px;
+  font-size: 23px
+}
+
+.title-edit-top {
+  width: 100%;
+  height: 60px;
+}
+.editing-title {
+  font-size: 20px;
+  color: $title-color-secondary;
+  position: absolute;
+}
+.edit-profile-name{
+  float: left;
+  width: 300px;
+  position: absolute;
+  left: 153px;
+  top: 90px;
+}
+////////
+////contact modal
+///////
+.contactinput {
+  z-index: 999;
+  background: $white-bkgd;
+  width:570px;
+  height:410px;
+  margin:0 auto;
+  left:26%;
+  .button-link{
+    margin-left: 30px;
+    margin-top: 10px;
+    &:hover{ text-decoration: underline; }
+  }
+}
+.contactemail {
+  font-size: 20px;
+  color: $title-color-secondary;
+  left: 0px;
+  text-align: left;
+  padding:30px;
+  float: left;
+  clear: both;
+}
+span.privacy-select{
+  line-height: 34px;
+  padding-left: 5px;
+  color: #8d897d;
+  font-size: 14px;
+}
+.contact-right{
+  width:350px;
+  margin-right: 40px;
+  margin-top: 17px;
+  line-height: 10px;
+  clear: right;
+  float: right;
+}
+.contactbox {
+  position: relative;
+  width:350px;
+  height:40px;
+
+}
+.contact-subtitle {
+  clear: left;
+  color: $subdued-text;
+  font-size: 14px;
+  width: 130px;
+  line-height:70px;
+  float: left;
+  margin-left: 40px;
+  overflow: hidden;
+  &.final-url {
+    margin-left: 190px;
+    margin-top: -5px;
+    width: 330px;
+    line-height: 17px;
+    font-size: 12px;
+    -webkit-touch-callout: initial;
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+  }
+}
+.contact-done {
+  position: absolute;
+  right: 30px;
+  bottom:15px;
+  border: 1px solid $gray-border;
+  width:90px;
+  height:40px;
+  background: $pale-green;
+  cursor:pointer;
+  &:hover {
+      background-color: darken($pale-green, 5%);
+  }
+}
+
+#delete-skill{
+  float:left;
+  &:hover{
+    color: red;
+  }
+}
+
+.confirm-delete-button{
+  width: 72px;
+  margin-left: 49px;
+  margin-top: 45px;
+  height: 35px !important;
+  border: 1px solid #ebe9e8;
+  cursor: pointer;
+  color: darkgrey;
+  &:hover{
+    color: black;
+  }
+}
+.confirm-delete-subtitle {
+  color: $subdued-text;
+  font-size: 14px;
+  padding:20px;
+  padding-top:24px;
+  position:absolute;
+}
+
+.confirm-delete{
+  z-index: 999;
+  background: #ffffff;
+  width: 300px;
+  height: 134px;
+  margin: 0 auto;
+  position: relative!important;
+}
+#skill-delete-modal{
+  top: -200px;
+  margin-left: 10%;
+}
+
+.adjust-lineheight-1 {
+  position: absolute;
+  left: 0;
+}
+.editing-subtitle {
+  font-size: 16px;
+  color: $subdued-text;
+  padding: 5px;
+  float: left;
+}
+
+.adjust-lineheight-2 {
+  position: absolute;
+  left: 0;
+  top: 55px;
+}
+
+.title-edit-mid-left{
+  position: relative;
+  height: auto;
+  width: 335px;
+  float: left;
+  input {
+    margin-top: 20px;
+    width: 400px;
+  }
+}
+
+.tags-select{
+  resize: none;
+  margin-top: 17px;
+  width: 365px!important;
+  height: 125px!important;
+  ul.select2-choices{
+    margin-top: 17px;
+    height: 125px !important;
+    overflow-y: auto;
+  }
+}
+
+.equity-union-select,
+.certification-select {
+  resize: none;
+  width: 350px;
+  height: 125px!important;
+  ul.select2-choices{
+    height: 125px !important;
+    overflow-y: auto;
+  }
+}
+
+.title-edit-mid-right {
+  position: relative;
+  height: auto;
+  width: 350px;
+  float: right;
+  border-left: 1px solid gray;
+  padding-left: 20px;
+  margin-right: 24px;
+}
+
+.title-edit-bottom {
+  position: relative;
+  width: 100%;
+  clear: both;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.title-section-icon {
+  position: relative;
+  top: -3px;
+  margin-left: 5px;
+}
+#contact-profile-edit{
+  width: 180px;
+  float: right;
+  cursor: none;
+}
+.contact-edit-icon{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.attr-section-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+.edit-icon.location-icon{
+  position: absolute;
+  top: 0;
+  left: 75px;
+  width: 25px;
+  height: 25px;
+  z-index: 10;
+}
+
+#profile-photo-modal {
+   width: 300px;
+   height: auto;
+   background: #fff;
+   top: 0;
+   left: 20px;
+   padding: 10px;
+   z-index: 999;
+   .uploadbox{
+     width: 280px;
+     margin-top: 5px;
+     font-size: 13px;
+   }
+ }
+.upload-buttons{
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+.attributes-location-edit {
+  width: 500px;
+  height: 520px;
+  background: #fff;
+  padding: 20px;
+  top: 200px;
+  left: 20px;
+  .clear-location-input{
+    margin: 0 8px;
+  }
+  .location-map{
+    width: 460px;
+    height: 300px;
+    img{
+      width: 100%;
+      height: 100%
+    }
+  }
+  #gmap-input{
+    width: 400px;
+  }
+  a{
+    cursor: pointer;
+  }
+}
+
+.features-edit-icon {
+  left: 80px;
+  top: -4px;
+}
+
+.attr-features-icon {
+  right: 160px;
+}
+
+.attrs-area-edit {
+  width: 750px;
+  height: auto;
+  z-index: 999;
+  background: white;
+  padding: 30px;
+  position: absolute;
+  top: 150px;
+  left: 120px;
+
+  .float-ul {
+    width: 300px;
+    float: left;
+    &:first-of-type{
+      margin-right: 60px;
+      margin-left: 20px;
+    }
+  }
+  li {
+    list-style-type: none;
+    line-height: 30px;
+  }
+  .attrs-feature-label{
+    float: left;
+    width: 99%;
+    margin-bottom: 0;
+  }
+  .attrs-feature-input {
+    width: 99%;
+    float: left;
+    margin-top: -9px;
+    line-height: 20px;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  input[type="button"]{
+    float: right;
+    margin: 10px;
+  }
+
+  .save-features-buttons {
+    .button {
+      cursor: pointer;
+      width: auto;
+    }
+    position: relative;
+    top: 20px;
+    clear: both;
+  }
+
+}
+
+
+.title-save-buttons {
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  padding-right: 22px;
+  input{
+    float: right;
+  }
+}
+
+.title-contact-buttons {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.profile-action-button {
+  @media only screen and (max-width: $screen-xs-max) {
+     display: inline-block;
+     margin: 15px;
+  }
+  cursor: pointer;
+  margin-left: 6px;
+  margin-top: 0;
+  color: gray;
+  background-color: transparent;
+  img{
+   width: 45px;
+   height: 45px;
+   clear: both;
+   float: left;
+   border-radius: 10px;
+  }
+  .label{
+    clear: both;
+    float: left;
+    width: 45px;
+    font-size: 11px;
+    text-align: center;
+    margin-top: -5px;
+    color: $title-color-secondary;
+    padding: 0;
+  }
+  .overlay{
+    margin-top: -31px;
+    clear: both;
+    float: left;
+    width: 45px;
+    font-size: 13px;
+    text-align: center;
+    color: $white-bkgd;
+    font-stretch: condensed;
+  }
+  &.disable{
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+}
+
+
+.update-buttons {
+  position: absolute;
+  padding: 30px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  input[type="button"]{
+    float: right;
+    &:disabled{
+      opacity: 0.6;
+      cursor: default;
+    }
+  }
+}
+
+#delete-headline-image,
+#delete-skill-video,
+#delete-skill-photo,
+#delete-skill-document{
+  float: left !important;
+  &:hover{
+    color: red;
+  }
+}
+
+.pull-left {
+  left: 20px;
+  right: auto;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  skill edit view styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+.skill-summary-edit {
+  position: absolute;
+  width: 696px;
+  height: 293px;
+  border-radius: 8px;
+  top: 0;
+  margin: 0 auto;
+  background: white;
+  .summary-textbox{
+    width: 656px;
+  }
+}
+.summary-title-edit {
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+.summary-textbox{
+  width: 100%;
+  height: 146px;
+  padding:10px;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+.summary-textarea {
+  margin: 10px 25px;
+  box-sizing: border-box;
+  border: 2px solid #ebe9e8;
+  border-radius: 4px;
+  box-shadow: none;
+  background: #fafaf8;
+  resize: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &:active{
+    border: 2px solid #ebe9e8;
+    border-radius: 4px;
+  }
+}
+.icon-bkgd {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: $black-opacity;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 99;
+}
+//new icons
+.edit-video,
+.edit-audio,
+#edit-document,
+.edit-photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: $black-opacity;
+  position: absolute;
+  top: 105px;
+  right: 10px;
+  z-index: 99;
+}
+.delete-document,
+.delete-photo{
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: $black-opacity;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  z-index: 99;
+}
+.add-document,
+.add-photo{
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: $black-opacity;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  z-index: 99;
+}
+.skill-element-icon {
+  font-size: 25px !important;
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  z-index: 999;
+}
+
+
+.skill-photo-edit  {
+  width: 660px;
+  height: 600px;
+  top: -120px;
+  left: 0;
+  padding: 30px;
+  background: $white-bkgd;
+}
+
+.skill-document-add,
+.skill-document-delete,
+.skill-document-edit,
+.skill-video-edit {
+  width: 500px;
+  height: 400px;
+  top: 0;
+  left: 100px;
+  padding: 30px;
+  background: $white-bkgd;
+}
+.skill-audio-edit {
+  width: 500px;
+  height: 250px;
+  top: 0;
+  left: 100px;
+  padding: 30px;
+  background: $white-bkgd;
+}
+#skillPicturePreview {
+  width: 100%;
+  min-height: 325px;
+}
+#skillImgUpload{
+  width: 100%;
+}
+#photo-upload-desc {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  border: 2px solid $gray-border;
+  border-radius: 4px;
+  box-shadow: none;
+  background: $input-bkgd;
+  margin-right: 15px;
+}
+.skill-photo-preview {
+  width: 600px;
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+#skill-photo-delete-modal{
+  margin-top: -200px;
+}
+
+.youtube-url-input {
+  margin: 0 auto;
+  width: 300px;
+
+}
+#new-skill-modal {
+  width: 375px;
+  height: 200px;
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px #000;
+  border: 1px solid #ccc;
+  .new-skill-name {
+    width: 100%;
+  }
+  .new-skill-select{
+    width: 100%;
+    margin-top: 30px;
+  }
+
+
+}
+
+.skill-document-title{
+  width: 430px;
+  height: 30px;
+  margin: 0;
+}
+.skill-document-desc {
+  margin-top: 10px;
+  width: 430px;
+  height: 150px;
+  box-sizing: border-box;
+  border: 2px solid $gray-border;
+  border-radius: 4px;
+  box-shadow: none;
+  background: $input-bkgd;
+  resize: none;
+}
+#skillImgUpload,
+#skillDocUpload{
+  width: 430px;
+  background: transparent;
+  line-height: 16px;
+  border: none;
+  margin-top: 5px;
+}
+
+.soundcloud-iframe {
+  width: 100%;
+  height: 100%;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  milestone bar styles
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+.milestone-bar {
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  border-radius: 8px;
+  position: relative;
+  background: #fff;
+  .left-title {
+    float: left;
+    font-size: 22px;
+    color: $title-color-secondary;
+    margin-top: 7px;
+    margin-left: 10px;
+  }
+  #publish-status{
+    margin-right: 5px;
+    float: right;
+    line-height: 40px;
+    .subtitle{
+      font-size: 16px;
+      color: $subdued-text;
+      margin-right: 5px;
+    }
+  }
+  .right-progress-bar-container {
+    width: 250px;
+    height: 40px;
+    border: 1px solid $pale-green;
+    border-radius: 8px;
+    float: right;
+    background-color:$subdued-text;
+    font-size: 18px;
+    position: relative;
+    .progress-bar {
+      position: absolute;
+      width: 0px;
+      height: 100%;
+      background: $pale-green;
+      border-radius: 7px;
+      z-index: 9;
+    }
+    .progress-text{
+      height: 40px;
+      z-index: 99;
+      position: relative;
+      padding-top: 10px;
+      padding-left: 10px;
+      color: white;
+      // text-shadow: 2px 2px #fff;
+    }
+  }
+}
+
+
+.go-private-button,
+.go-live-button {
+  cursor:pointer;
+  margin-right: 10px;
+  opacity: 0.8;
+  color: black;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.profile-location-input {
+  width: 210px;
+}
+.profile-location-input-container {
+  display: inline;
+}
+
+.skill-continue-button {
+  width: 200px;
+  color: #fff;
+  font-size: 16px;
+  background: $title-color-secondary;
+  &:hover {
+    background: darken($title-color-secondary, 5%);
+  }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  profile go live modal
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+.golive {
+  z-index: 999;
+  background: $white-bkgd;
+  width:300px;
+  height:120px;
+  left:40%;
+  top:300px;
+  position:fixed!important;
+  padding: 20px;
+}
+#consentPublish {
+  position: absolute;
+  left:20px;
+  bottom:10px;
+  border: 1px solid $gray-border;
+  width:120px;
+  height:40px;
+  background: $pale-green;
+  cursor:pointer;
+  &:hover {
+      background-color: darken($pale-green, 5%);
+  }
+}
+
+#declinePublish {
+    position: absolute;
+    right:20px;
+    bottom:10px;
+    border: 1px solid $gray-border;
+    width: 120px;
+    height: 40px;
+    background: $title-color-secondary;
+    cursor: pointer;
+    &:hover{
+    color: darken($white-bkgd, 10%);
+  }
+}
+
+.smallprint{
+  color: $subdued-text;
+  font-family: sans-serif;
+  font-size: 14px;
+  position:absolute;
+}
+
+.greenbutton {
+  border: 1px solid $gray-border;
+  width:120px;
+  height:40px;
+  background: $pale-green;
+  cursor:pointer;
+  &:hover {
+    background-color: darken($pale-green, 5%);
+  }
+}
+
+.redbutton {
+  position: absolute;
+  right:20px;
+  bottom:10px;
+  border: 1px solid $gray-border;
+  width: 120px;
+  height: 40px;
+  background: $title-color-secondary;
+  cursor: pointer;
+  &:hover{
+    color: darken($white-bkgd, 10%);
+  }
+}
+.greenbuttonswap {
+  position: absolute;
+  right:20px;
+  bottom:10px;
+  border: 1px solid $gray-border;
+  width:120px;
+  height:40px;
+  background: $pale-green;
+  cursor:pointer;
+  &:hover {
+    background-color: darken($pale-green, 5%);
+  }
+}
+
+.redbuttonswap {
+  position: absolute;
+  right:160px;
+  bottom:10px;
+  border: 1px solid $gray-border;
+  width: 120px;
+  height: 40px;
+  background: $title-color-secondary;
+  cursor: pointer;
+  &:hover{
+    color: darken($white-bkgd, 10%);
+  }
+}
+
+
+ //////edit skill pop up
+#skill-edit-modal{
+  background-color: white;
+  height: 185px;
+  width: 490px;
+  z-index: 999;
+  position: absolute;
+  padding: 20px;
+  color: #8d897d;
+  font-size: 14;
+  font-weight: 100;
+  top: 275px;
+  left: 50%;
+  margin-left: -245px;
+  .new-skill-name {
+    width: 100%;
+  }
+}
+
+.deleteSkill-subtitle {
+  color: $title-color-secondary;
+  font-size: 18px;
+  margin-bottom: 10px;
+  span {
+    float: right;
+    margin-right: 35px;
+  }
+}
+
+.deleteSkill-button {
+  float:left;
+  clear:left;
+  margin-left: 0;
+  margin-top: 0;
+  width: 120px;
+  height: 40px;
+  background: $title-color-secondary;
+  border: 1px solid $gray-border;
+  cursor: pointer;
+}
+
+      //----------Share modal (no transferable classes)--------////
+
+.share-profile-modal{
+  background-color:white;
+  height:370px;
+  width: 70vw;
+  max-width:500px!important;
+  right: 10%;
+  left: auto;
+  top: 5vw;
+  z-index:99;
+  padding:20px;
+  border-radius:2px;
+  -webkit-box-shadow: 2px 2px 9px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    2px 2px 9px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         2px 2px 9px 0px rgba(50, 50, 50, 0.75);
+  &.bottom{
+    bottom: 2vw;
+    top: auto;
+  }
+    img{
+    height:66px;
+    cursor:pointer;}
+
+    #social-icons{
+      left: 0;
+      bottom: 20px;
+      width: 100%;
+      position: absolute;
+      text-align: left;
+      font-weight: 400;
+      font-size: 20px;
+      padding-left: 20px;
+      padding-right: 21px;
+    }
+
+    #share-url{
+      position: relative;
+      width: 100%;
+      border: 1px solid grey;
+      background-color:white;
+      border-radius:1px;
+      color: $subdued-text;
+    }
+
+    #share-divide{
+     height:1px;
+     width:98%;
+     margin:auto;
+     background: $subdued-text;
+
+  #share-divide-orange{
+      background: $title-color-secondary;
+      width:60px;
+      height:1px;
+      left:0px;}
+  }
+  #share-divide-2{
+    position:absolute;
+    height:2px;
+    width:100%;
+    margin:auto;
+    background-color: darken($white-bkgd, 10%);
+    bottom:150px;
+    margin-left:-20px;
+  }
+  #share-sub-right{
+    float:left;
+    margin:30px 0px 0px 80px;
+    text-align:left;
+  }
+  #share-sub-left{
+     float:left;
+  }
+
+  #share-text{
+    color: $darker-text;
+  }
+}
+
+
+#favorite-created{
+  z-index: 9999;
+  background-color: #f1efea;
+  color: grey;
+  font-weight: 300;
+  top: 50%;
+  margin-top: -170px;
+  position: fixed;
+  left: 50%;
+
+  font-size: 24px;
+  width: 415px;
+  height: 330px;
+  margin-left: -208px;
+  @media only screen and (max-width: $screen-xs-max) {
+     font-size: 18px;
+     width: 315px;
+     height: 230px;
+     margin-left: -155px;
+  }
+
+  a{ text-decoration: underline; }
+  .check-mark-img{
+    width: 200px;
+    height: 177px;
+    @media only screen and (max-width: $screen-xs-max) {
+      height: 120px;
+      background-position-y: -40px;
+    }
+    background-image: url(../images/check-mark.png);
+    margin: 0 auto;
+    background-repeat: no-repeat;
+  }
+  h4{
+    width: 100%;
+    text-align: center;
+  }
+}

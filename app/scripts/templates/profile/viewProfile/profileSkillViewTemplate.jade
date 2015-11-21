@@ -1,0 +1,26 @@
+div.profile-subtitle Summary
+
+div#summary-display.skill-summary.view
+  if (skill.skillSummary)
+    =skill.skillSummary
+  else
+    |This service has no summary.
+
+div.visible-xs.visible-sm
+  div.profile-subtitle Location
+    div.portrait-location
+      a(href=profile.location_google, target="_empty")
+        =profile.location
+
+div(class="skill-element-container")
+  div.tab-navigation
+    div.tab-button(data-tabnav="docs") Documents
+      div.inner
+    div.tab-button(data-tabnav="videos") Videos
+      div.inner
+    div.tab-button.active(data-tabnav="photos") Photos
+      div.inner
+
+  div(class="tab-element active",id="photos-tab")
+  div(class="tab-element",id="videos-tab")
+  div(class="tab-element",id="documents-tab")

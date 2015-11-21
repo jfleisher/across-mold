@@ -1,0 +1,147 @@
+/* line 1, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip {
+  position: absolute;
+  z-index: 999999;
+  display: block;
+  visibility: visible;
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0;
+  -webkit-filter: alpha(opacity=0);
+  filter: alpha(opacity=0);
+}
+
+/* line 11, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip.in {
+  opacity: 0.9;
+  -webkit-filter: alpha(opacity=90);
+  filter: alpha(opacity=90);
+}
+
+/* line 15, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+
+/* line 19, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+
+/* line 23, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+
+/* line 27, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+
+/* line 32, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: black;
+  border-radius: 4px;
+}
+
+/* line 42, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+/* line 50, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: black;
+}
+
+/* line 57, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  border-width: 5px 5px 0;
+  border-top-color: black;
+}
+
+/* line 63, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  border-width: 5px 5px 0;
+  border-top-color: black;
+}
+
+/* line 69, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: black;
+}
+
+/* line 76, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: black;
+}
+
+/* line 83, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: black;
+}
+
+/* line 90, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: black;
+}
+
+/* line 96, ../../../app/styles/vendor/bootstrap_tooltips.scss */
+
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: black;
+}

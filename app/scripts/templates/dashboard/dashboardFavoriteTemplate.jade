@@ -1,0 +1,69 @@
+div.row.favorite-panel
+
+  -var profileImgUrl = "images/placeholder_imgs/profile_placeholder.png"
+  if profile.profilePictureUrl
+    - profileImgUrl = profile.profilePictureUrl
+  div.col-xs-7.col-sm-3.col-md-3.col-lg-3
+    div.profile-image-box
+      div.profile-image-container(style="background:url('" + profileImgUrl +"')", data-profileid=profileId)
+  div.visible-xs.col-xs-5
+    br
+    div.profile-title.text-right
+      =profile.profileName
+    br
+
+  div.col-xs-12.col-sm-8.col-md-8.col-lg-8
+    div.content
+      div.hidden-xs.profile-title
+        =profile.profileName
+        &nbsp;
+        span.orgs
+          if profile.profileType == 'business' || profile.profileType == 'venue'
+            if profile.certifications
+              -each val, index in profile.certifications
+                =val
+                if index < profile.certifications.length -1
+                  ='/'
+          else
+            if profile.organizations
+              - for (var x = 0; x < profile.organizations.length; x++)
+                if x == profile.organizations.length - 1
+                  =profile.organizations[x]
+                else
+                  =profile.organizations[x] + "/"
+
+
+      div.subtitle
+        if profile.profileType == 'venue'
+          div.heading Venue Type:
+        else if profile.profileType == 'business'
+          div.heading Services:
+        else
+          div.heading Skills:
+        if profile.skills
+          - for (var x = 0; x < profile.skills.length; x++)
+            if x == profile.skills.length - 1
+              if profile.skills[x]
+                =profile.skills[x].skillType
+            else
+              if profile.skills[x]
+                =profile.skills[x].skillType + ", "
+
+      div.subtitle
+        div.heading Tags:
+        if profile.tags
+          - for (var x = 0; x < profile.tags.length; x++)
+            if x == profile.tags.length - 1
+              if profile.tags[x]
+                =profile.tags[x]
+            else
+              if profile.tags[x]
+                =profile.tags[x] + ", "
+      div.profile-location.subtitle
+        div.heading Location:
+        if profile.location
+          =profile.location
+
+      div.bottom-buttons
+        input.viewFavProfile.button-red(type="button", value="View Profile", data-profileid=profileId)
+        input#removeFavorite.sub-nav-button.button-link(type="button", value="Remove", data-profileid=profileId)

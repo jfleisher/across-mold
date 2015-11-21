@@ -1,0 +1,27 @@
+
+div.attributes-area
+  div.attributes-features
+    -var photoUrl = "images/placeholder_imgs/profile_placeholder.png"
+    if profile.profilePictureUrl
+      -photoUrl = profile.profilePictureUrl
+    div.attributes-photo(style="background:url('"+ photoUrl +"')")
+
+    if (profile.profileFeatures)
+      -var featureCt = 0
+      -for(key in Mi.CMS[profile.profileType].attributes)
+        if (profile.profileFeatures[key] && profile.profileFeatures[key].length)
+          -featureCt++
+      if (featureCt>0)
+        div.profile-subtitle Features
+        div.profile-features-area
+          ul
+            -for(key in Mi.CMS[profile.profileType].attributes)
+              -var value = profile.profileFeatures[key] ? profile.profileFeatures[key] : ''
+              if value && value.length
+                li= Mi.CMS.labels[key] + ": " + value
+
+  div.attributes-location
+    if (profile.latlng)
+      div.profile-subtitle Location
+      div.location-container
+        div(class="location-map", id="location-map")

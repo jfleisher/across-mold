@@ -1,0 +1,7 @@
+a.title Tags:&nbsp;
+if (profile.tags.length > 0)
+  - for (var x = 0; x < profile.tags.length; x++)
+      if (x == profile.tags.length - 1)
+        =profile.tags[x]
+      else
+        =profile.tags[x] + ", "

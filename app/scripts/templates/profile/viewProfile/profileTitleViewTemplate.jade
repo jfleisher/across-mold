@@ -1,0 +1,90 @@
+-var profileUrl = profile.profileCustomUrl
+if profileUrl && profileUrl.length
+  - profileUrl = encodeURIComponent("www.across-mold.com/#/" + profileUrl)
+else
+  - profileUrl = encodeURIComponent("www.across-mold.com/#/display-profile/"+profileId)
+
+
+div.row
+  div.col-lg-2.col-md-0
+  div.title-area.col-lg-8.col-md-12
+    div.title-content
+      div.col-12.left-title
+        //- user first name and last name
+        span.title-name
+          if profile.profileName && profile.profileName.length
+            =profile.profileName
+          else
+            |No profile name
+          &nbsp;
+        //- loop through orgs and print em...needs to accomodate for org lists > 3
+        span.title-orgs
+          if profile.profileType == 'business' || profile.profileType == 'venue'
+            if profile.certifications
+              - for (var x = 0; x < profile.certifications.length; x++)
+                =profile.certifications[x]
+                if (x < profile.certifications.length-1)
+                  ="/"
+          else
+            if profile.organizations
+              - for (var x = 0; x < profile.organizations.length; x++)
+                =profile.organizations[x]
+                if (x < profile.organizations.length-1)
+                  ="/"
+
+      div.col-8.col-xs-12.user-tags
+        span.title Tags:&nbsp;
+        if (profile.tags.length > 0)
+          - for (var x = 0; x < profile.tags.length; x++)
+              -tagsearch = "#/search/q/" + profile.tags[x]
+              a(href=tagsearch)
+                =profile.tags[x]
+              if (x < profile.tags.length - 1)
+                |,&nbsp;
+
+      div.col-2.hidden-xs.right-title
+        div.contact-links
+          div#share-modal.profile-action-button(data-toggle="tooltip")
+            img(src="images/share_button.png")
+            div.label Share
+
+          div#save-profile.profile-action-button(data-toggle="tooltip")
+            img(src="images/favorite_button.png")
+            div.label Favorite
+
+          div#contact-profile.profile-action-button(data-toggle="tooltip")
+            a#contact-email
+              img(src="images/contact_button.png")
+              div.label Contact
+
+//--------------share profile modal
+div(class="popover share-profile-modal",)
+  span(class="ss-delete close-modal", id="hide-share-modal")
+  span.title-name#hide-share-modal|Share
+  div#share-divide
+    div#share-divide-orange
+  div#share-sub-left
+      div.profile-left(id="profile-summary-"+profileId)
+        -var profileImgUrl="images/placeholder_imgs/profile_placeholder.png"
+        if profile.profilePictureUrl
+          -profileImgUrl=profile.profilePictureUrl
+        div.profile-image(style="background:url('" + profileImgUrl + "')")
+  div#share-sub-right
+    span.title-name
+      =profile.profileName
+      br
+    span.title-orgs#share-text
+      =profile.profileType
+  div#share-divide-2
+  div#social-icons
+     | Share
+     br
+     a#fb-share
+      img#imgopacity(src="images/social_icons/facebook.png")
+     a(href="http://twitter.com/share?url=&text=Check out who's on Across Mold! " + profileUrl +"&hashtags=AcrossMold", target="_blank")
+       img#imgopacity(src="images/social_icons/twitter.png")
+     a(href="mailto:?subject=Check out who%27s on Across Mold!&body=" + profileUrl)
+      img#imgopacity(src="images/social_icons/mail.png")
+     input(type="text", id="share-url", value=decodeURIComponent(profileUrl))
+
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

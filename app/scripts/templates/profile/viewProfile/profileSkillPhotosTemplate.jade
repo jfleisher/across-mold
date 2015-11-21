@@ -1,0 +1,27 @@
+div#skill-photo-slideshow
+
+	if(skill && skill.skillPhotos && skill.skillPhotos.length)
+
+		ul
+			- for (var x = 0; x < skill.skillPhotos.length; x++)
+				li(class="photo-slide-"+x)
+					img(src=skill.skillPhotos[x].photoUrl)
+
+		div.skill-slideshow-subnav
+			div.slide-navigate.left.photo(data-slideshow="prev")
+			div.slide-navigate.right.photo(data-slideshow="next")
+			div.ss-navigateleft
+			div
+				ul
+					- for (var x = 0; x < skill.skillPhotos.length; x++)
+						li.description(class="photo-slide-"+x)
+							=skill.skillPhotos[x].photoDesc
+					- for (var x = 0; x < skill.skillPhotos.length; x++)
+						li.counter(class="photo-slide-"+x)
+							= (x + 1) +" of " + skill.skillPhotos.length
+			div.ss-navigateright
+	else
+
+		ul
+			li.photo-slide-0.active
+				img(src="images/placeholder_imgs/gallery_placeholder.jpg", id="slide-placeholder", style="display: block;")

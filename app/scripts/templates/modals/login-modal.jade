@@ -1,0 +1,15 @@
+div#login-box.modal-content.popover
+  div.modal-body
+    span#login-close(class="ss-delete")
+    if title
+      h4#myModalLabel.modal-title
+        =title
+    else
+      h4#myModalLabel.modal-title Login to your account.
+    div.email-pass-inputs
+      input.login-email-input(type="email", placeholder="Email", id="login-email")
+      input.login-password-input(type="password", placeholder="Password", id="login-password", name="pwd")
+      input(type="button", class="search-button button", id="submit-login", value="Submit")
+      br
+      p#center-login Don't have an account? &nbsp;
+        a#bold-login(href="#/register") Sign Up

@@ -1,0 +1,34 @@
+div#skill-document-slideshow
+
+	if(skill && skill.skillDocuments && skill.skillDocuments.length)
+
+		ul
+			- for (var x = 0; x < skill.skillDocuments.length; x++)
+				li(class="document document-slide-"+x, data-index=x)
+					div.document-slide
+						img.document-slide(src="images/document.jpg")
+						div.title
+							= skill.skillDocuments[x].title
+						div.description
+							= skill.skillDocuments[x].desc
+						div.download
+							a.download(href=skill.skillDocuments[x].url, target="makeitglobal_document")
+								|Download
+
+		div.skill-slideshow-subnav
+			div.slide-navigate.left.document(data-slideshow="prev")
+			div.slide-navigate.right.document(data-slideshow="next")
+			span.ss-navigateleft
+			span
+				ul
+					- for (var x = 0; x < skill.skillDocuments.length; x++)
+						li.description(id="document-title-"+x, class="document-slide-"+x)
+							=skill.skillDocuments[x].title
+						li.counter(id="document-counter-"+x, class="document-slide-"+x)
+							= (x + 1) +" of " + skill.skillDocuments.length
+			span.ss-navigateright
+	else
+
+		ul
+			li.document-slide-0.active
+				img(src="images/placeholder_imgs/doc_placeholder.jpg", id="slide-placeholder", style="display: block;")

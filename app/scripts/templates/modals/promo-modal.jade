@@ -1,0 +1,7 @@
+div#promo-modal.modal.fade
+  img(src="images/loading-orange.gif")
+  div#promo-close.ss-delete
+  if (videoUrl)
+    <iframe id='videoplayer' src="#{videoUrl}" frameborder="0"></iframe>
+  else
+    <iframe id='videoplayer' src="http://www.youtube.com/embed/QjnI4ky5o3k?rel=0&autoplay=1&autohide=1" frameborder="0"></iframe>

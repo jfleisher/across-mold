@@ -1,0 +1,71 @@
+div#profileModals
+
+  //- profile welcome modal
+  //- displayed the first time a user arrives at a new profile
+
+  div(class="modal fade", id="welcome-modal")
+    div.modal-dialog
+      div.modal-content
+        div.modal-body
+          div.profile-subtitle
+            case profile.profileType
+              when "_3d_printing"
+                |3D Printing Profile Editor
+              when "injection_molding"
+                |Injection_molding Profile Editor
+              when "metal_die_casting"
+                |Metal Die Casting Profile Editor
+              when "cnc_machining"
+                |CNC Machining Profile Editor
+              when "other"
+                |Other Services Profile Editor
+
+          br
+          span.profile-caption What do you want this profile to be called?
+          br
+          input(type="text", class="primary-input, new-profile-input", id="profileName", placeholder="stage name, band name, real name")
+
+
+          if profile.profileType == "_3d_printing"
+            span#skill-select-label.profile-caption Add the first 3D Printing Service.
+            input#skill-select(class="chosen-skill-select skill-select", style='width: 350px;', data-placeholder="Select a 3D Printing service", name="prof-edit-drop")
+          else if profile.profileType == "injection_molding"
+            span#skill-select-label.profile-caption Add your first Injection Molding Service.
+            input#skill-select(class="chosen-skill-select skill-select", style='width: 350px;', data-placeholder="Select an Injection Molding service", name="prof-edit-drop")
+          else if profile.profileType == "metal_die_casting"
+            span#skill-select-label.profile-caption Add your first Metal Die Casting Service.
+            input#skill-select(class="chosen-skill-select skill-select", style='width: 350px;', data-placeholder="Select an Metal Die Casting service", name="prof-edit-drop")
+          else if profile.profileType == "cnc_machining"
+            span#skill-select-label.profile-caption Add your first CNC Machining Service.
+            input#skill-select(class="chosen-skill-select skill-select", style='width: 350px;', data-placeholder="Select a CNC Machining service", name="prof-edit-drop")
+          else 
+            span.profile-caption Add your first service.
+            input#skill-select(class="chosen-skill-select skill-select", style='width: 350px;', data-placeholder="Select a service", name="prof-edit-drop")
+
+        div.modal-footer
+          div.profile-caption To edit this profile, click on the various pencils.
+          input(type='button',class="skill-continue-button", id="saveProfileBasics", value="Continue >>")
+
+
+
+  //- ---------------------------------------------------------------------------------------
+
+  //- profile skills modal
+  div(class="modal fade", id="addskillmodal")
+    div.modal-dialog
+      div.modal-content
+        div.modal-header
+          button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+          h4.modal-title Add a skill!
+        div.modal-body
+          span.edit-label skill Name
+          br
+          input(type="text", class="primary-input")
+          br
+          span.edit-label skill summary
+          br
+          textarea(class="skill-summary-input")
+
+        div.modal-footer
+          button.btn.btn-default(type='button', data-dismiss='modal') Close
+          button.btn.btn-primary(type='button') Save changes

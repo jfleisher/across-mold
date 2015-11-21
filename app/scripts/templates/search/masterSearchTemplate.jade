@@ -1,0 +1,31 @@
+div.row
+  div.col-md-1
+  div.col-md-10.search-results-container
+    div.profile-title
+      if searchTerm && searchLocation
+        ='Searched for ' + searchTerm + ' near ' + searchLocation
+      else if searchTerm
+        ='Search for ' + searchTerm
+      else if searchLocation
+        ='Searched for profiles near ' + searchLocation
+  div.col-md-1
+div.row
+  div.col-md-1
+  div.col-md-7.profile-subtitle
+    div#search-result-status.num-of-results
+div.row
+  div.col-md-1
+  div.col-md-8.search-results
+  div.col-md-2.ad-space-container.hidden-xs.hidden-sm
+    div.example-ad
+      a(href="http://www.procomps.com/", target="_blank")
+        img(src="images/ads/ad-progressive-components.png")
+    div.example-ad
+      a(href="http://www.ast-tech.de/", target="_blank")
+        img(src="images/ads/ad-ast-technology.png")
+    div.example-ad
+      a(href="http://www.jdltech.ca/index.html", target="_blank")
+        img(src="images/ads/ad-perfect-cal-card.png")
+    div.example-ad
+      a(href="mailto:contact@across-mold.com")
+        img(src="images/ads/advertise_your_business.jpeg")

@@ -1,0 +1,17 @@
+div.registration-page-3
+  div.add-new-profile
+    h1 Select your profile type
+    div.profile-selection-container
+      div.profile-selection-buttons
+        button(class="profile-button selected-profile", id="select-3d-printing", data-profiletype="_3d_printing") 3D Printing
+        button(class="profile-button", id="select-injection-molding", data-profiletype="injection_molding") Injection Molding
+        button(class="profile-button", id="select-metal-die-casting", data-profiletype="metal_die_casting") Metal Die Casting
+        button(class="profile-button", id="select-cnc-machining", data-profiletype="cnc_machining") CNC Machining
+        button(class="profile-button", id="select-other", data-profiletype="other") Other Services
+      - each index, val in Mi.CMS.profile_desc
+        div.profile-selection-desc(id=val+"-desc")
+          =index
+
+    div.continue-button-section
+      span.red-text You can add another profile type later
+      input(type="button", id="create-new-profile", value="Continue >>")

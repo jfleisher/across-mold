@@ -1,0 +1,11 @@
+if editSkill
+  div.skill-button.edit.active(data-skillid=skillId)
+    div.skill-text
+      =skillName
+    span#edit-skill-type(class="ss-write edit-icon open-modal", data-openmodal="skill-edit-modal")
+    div.inner
+else
+  div.skill-button.edit(data-skillid=skillId)
+    div.skill-text
+      =skillName
+    div.inner

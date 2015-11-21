@@ -1,0 +1,93 @@
+div.row
+  div.col-lg-2.col-md-0
+  div.title-area.col-lg-8.col-md-12
+    div.cover-photo
+      div.icon-bkgd.headline-photo-icon
+        span#edit-headline-image(class="ss-write edit-icon skill-element-icon", data-openmodal="headlinePhotoEdit")
+      div.headline-image-container
+        if (profile.skills && profile.skills.length && profile.skills[0].skillHeadlinePhotoUrl)
+          img.headline-photo(src=profile.skills[0].skillHeadlinePhotoUrl)
+        else
+          if (profile.profileType == 'business' || profile.profileType == 'venue')
+            img.headline-photo(src="images/placeholder_imgs/biz_headline_placeholder_edit.jpg")
+          else if (profile.profileType == 'executive')
+            img.headline-photo(src="images/placeholder_imgs/exec_headline_placeholder_edit.jpg")
+          else if (profile.profileType == 'behindthescenes')
+            img.headline-photo(src="images/placeholder_imgs/bts_headline_placeholder_edit.jpg")
+          else
+            img.headline-photo(src="images/placeholder_imgs/headline_placeholder.jpg")
+
+div.row
+  div.col-lg-2.col-md-0
+  div.title-area.col-lg-8.col-md-12
+    div.sub-heading-nav
+      if profile.profileType == 'business'
+        span.skills-heading Services
+      else if profile.profileType == 'venue'
+        span.skills-heading Venues
+      else
+        span.skills-heading Skills
+
+      div.skill-button-container
+        div(class="skill-button add-skill")
+          div(id="add-skill", class="ss-plus open-modal", data-openmodal="new-skill-modal")
+
+      if (profile.skills)
+        - for (var x = 0; x < profile.skills.length; x++)
+          if x < 4
+            div.skill-button-container
+              div.skill-button.edit(data-skillid=x)
+                div.skill-text
+                  =profile.skills[x].skillType
+                div.inner
+
+
+  //------- Edit Skill Modal
+  div#skill-edit-modal.editSkillModal.popover
+    div.deleteSkill-subtitle Rename Skill
+    input#skill-type-edit(data-placeholder="Select a skill type", class="new-skill-name skill-select")
+    br
+    br
+    br
+    div.update-buttons
+      input#delete-skill(type="button", value="Delete Skill", class="open-modal button-link", data-openmodal="skill-delete-modal")
+      input#update-skill(type="button", class='button-alt greenbutton', value="Done")
+      input(type="button", class='button-link close-modal', value="Cancel", data-closemodal="skill-edit-modal")
+
+  //----------- prompt to publish
+  div#prompt-user-to-publish.golive.popover
+    span(class="smallprint") Congratulations! This profile is over 50% complete.
+    br
+    br
+    input#consentPublish(type="button", class="button-alt", value="Publish now")
+    input#declinePublish(type="button", class="button-alt", value="Stay private")
+
+  //----------- headline photo upload modal
+  div#headlinePhotoEdit.headline-area-edit.popover
+    span.ss-delete.close-modal(data-closemodal="headlinePhotoEdit")
+    span#headline-photo-edit-title.profile-subtitle Edit Headline Image
+    br
+    br
+    div#headlinePhotoPreview
+    div.upload-buttons
+      input(type="file", id="headlineImgUpload", class="headline-image-upload", accept="image/*")
+    div.update-buttons
+      input(type="button", class="button-link", value="Delete", id="delete-headline-image")
+      input(type="button", class="button-alt greenbutton", value="Upload", id="upload-headline-image")
+      input(type="button", class="button-link close-modal", data-closemodal="headlinePhotoEdit", value="Cancel")
+
+  //---------- new skill modal
+  div#new-skill-modal.popover
+    div.profile-subtitle Add a new skill
+    div.new-skill-select
+      input#skill-type-add(data-placeholder="Select a skill type", class="new-skill-name skill-select")
+    div.update-buttons
+      input(type="button", class='button-alt greenbutton submit-new-skill', value="Add")
+      input(type="button", class='button-link cancel-skill-creation  close-modal', value="Cancel", data-closemodal="new-skill-modal")
+
+
+div.row
+  div.col-lg-2.hidden-md
+  div.col-lg-2.col-md-3.hidden-sm.hidden-xs.attributes-placeholder
+  div.title-area.col-lg-6.col-md-9.col-sm-12
+    div.skill-area

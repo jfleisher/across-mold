@@ -1,0 +1,24 @@
+div.profile-left(id="profile-summary-"+profileId)
+  -var profileImgUrl="images/placeholder_imgs/profile_placeholder.png"
+  if profile.profilePictureUrl
+    -profileImgUrl=profile.profilePictureUrl
+  div.profile-image(style="background:url('" + profileImgUrl + "')")
+  div.profile-detail
+    div.profile-left-title
+      =profile.profileName
+    div.profile-type
+      =profile.profileType
+    br
+    div.profile-skills
+      if (profile.skills)
+        - for (var x = 0; x < profile.skills.length; x++)
+          if (x == profile.skills.length - 1)
+            =profile.skills[x].skillType
+          else
+            =profile.skills[x].skillType + ", "
+
+div.profile-sub-nav
+  a.sub-nav-button.edit-profile.hidden-sm.hidden-xs(href="#/edit-profile/"+profileId) Edit Profile
+  a.sub-nav-button(href="#/display-profile/"+profileId, data-profiletype=profile.profileType, data-profileid=profileId) View Profile
+  a.sub-nav-button.hidden-sm.hidden-xs.sub-nav-delete(data-profiletype=profile.profileType, data-profileid=profileId) Delete Profile
+

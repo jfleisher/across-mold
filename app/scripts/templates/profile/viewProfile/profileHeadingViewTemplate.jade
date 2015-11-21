@@ -1,0 +1,48 @@
+- var skills = profile.skills
+- var initSkill = skills && skills.length ? skills[0] : null
+div.row
+  div.col-lg-2.col-md-0
+  div.title-area.col-lg-8.col-md-12
+    div.cover-photo
+      div.headline-image-container
+        if initSkill
+          img.headline-photo(src=initSkill.skillHeadlinePhotoUrl)
+        else
+          img.headline-photo(src="images/placeholder_imgs/headline_placeholder.jpg")
+ 
+
+div.row
+  div.col-lg-2.col-md-0
+  div.title-area.col-lg-8.col-md-12
+    div.sub-heading-nav
+      span.skills-heading Services
+      - for (var x = 0; x < skills.length; x++)
+        if x < 4
+          div.skill-button-container
+            div.skill-button(data-skillid=x)
+              div.skill-text
+                  =profile.skills[x].skillType
+              div.inner
+
+
+div.row
+  div.col-lg-2.hidden-md
+  div.col-lg-2.col-md-3.hidden-sm.hidden-xs.attributes-placeholder
+  div.title-area.col-lg-6.col-md-9.col-sm-12.col-xs-12
+    div.skill-area
+      h1 LOADING...
+
+div.visible-xs.row
+   div.contact-links
+      div#share-modal.profile-action-button(data-toggle="tooltip")
+         img(src="images/share_button.png")
+         div.label Share
+
+      div#save-profile.profile-action-button(data-toggle="tooltip")
+         img(src="images/favorite_button.png")
+         div.label Favorite
+
+      a#contact-email
+         div#contact-profile.profile-action-button(data-toggle="tooltip")
+           img(src="images/contact_button.png")
+           div.label Contact
