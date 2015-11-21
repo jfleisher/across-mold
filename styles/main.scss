@@ -1,0 +1,474 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,300italic,400italic");
+@import "../bower_components/jquery-ui/themes/base/jquery.ui.autocomplete.css";
+@import "../bower_components/bootstrap-sass/dist/css/bootstrap.min.css";
+@import "../bower_components/bootstrap-sass/lib/_variables";
+@import "base";
+@import "menubar";
+@import "profilepage";
+@import "registrationpage";
+@import "microsite";
+@import "dashboard";
+@import "search";
+@import "bootstrap-modal";
+@import "animate";
+@import "quotation";
+@import "vendor/cropimg";
+
+
+///////////////////////////
+// universal hidden class
+///////////////////////////
+.hidden {
+  display: none!important;
+}
+
+.text-right{ text-align: right;}
+
+////////////////////////////////////////////
+//  wrap content so footer stays at bottom
+////////////////////////////////////////////
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -50px;
+  zoom: 1;
+}
+
+///////////////////////////////////////////////////////
+//  dev styles for psuedo login layer   ///////////////
+///////////////////////////////////////////////////////
+.popover{
+  position: absolute;
+  max-width: none;
+}
+.login-layer {
+  position: fixed;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: $dulled-bkgd;
+  z-index: 999;
+  .login-section {
+    background: $title-color-secondary;
+    border: 1px solid white;
+    width: 300px;
+    height: 200px;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 8px;
+  }
+}
+
+///////////////////////////////////////////////////////////
+///////////////////// footer styles ///////////////////////
+///////////////////////////////////////////////////////////
+
+.footer-container {
+  float: left;
+  clear: both;
+  height: 50px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: $dark-gray;
+  z-index: 999;
+  .footer-social-icons {
+    width: auto;
+    float: left;
+    img {
+      height: 30px;
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+  .footer-links {
+    margin-top: 8px;
+    float: right;
+    font-weight:200;
+    div {
+      margin-left: 20px;
+      color: $white-bkgd;
+    }
+    a{ color: $white-bkgd;}
+  }
+}
+.select2-hidden-accessible{
+  display:none;
+}
+.profile-edit-footer {
+  position: relative;
+  top: 0;
+}
+
+.dashboard-footer {
+  position: relative;
+  bottom: -200px;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////
+////////////////  background & utils
+///////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+* {
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-size: 14px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input, textarea{
+  -webkit-touch-callout: text!important;
+  -webkit-user-select: text!important;
+  -khtml-user-select: text!important;
+  -moz-user-select: text!important;
+  -ms-user-select: text!important;
+  user-select: text!important;
+}
+
+.right{
+  float: right;
+}
+
+html,body {
+  font-family: Roboto!important;
+  background: $dulled-bkgd;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #f1efea;
+  width: 100%!important;
+}
+
+a {
+  text-decoration: none;
+  color: $darker-text;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:visited {
+    color: $darker-text;
+  }
+  &:active {
+    color: $darker-text;
+  }
+}
+.background {
+  z-index: -99999;
+  width: 100%;
+  position: absolute;
+  background: $white-bkgd;
+
+}
+
+.upper-bkgd {
+  //height accounts for nav bar
+  z-index: 9;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: $dulled-bkgd;
+}
+
+.search-button {
+  width: 90px;
+  height: 40px;
+}
+.core-button {
+  background: $title-color-secondary;
+  border: 1px solid $gray-border;
+  &:hover{
+    color: darken($white-bkgd, 10%);
+  }
+  &:active {
+    background: darken($title-color-secondary, 10%);
+
+  }
+
+}
+
+.white-button {
+  background: none;
+  border: none;
+  // margin for the microsite subnav
+  &:hover{
+    text-decoration: underline;
+  }
+  &:active {
+    text-decoration: underline;
+  }
+    over {
+        text-decoration: underline;}
+
+
+}
+
+
+.over {
+        text-decoration: underline;}
+
+.button-link{
+  font-size: 16px;
+  float:left;
+  line-height: 22px;
+  margin-left: 0;
+  margin-right: 10px;
+  background-color: transparent;
+  padding: 5px;
+  color:$subdued-text;
+  &.right{
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+  }
+  &.active{color:$title-color-secondary; text-decoration: underline;}
+  &:hover{text-decoration: underline;}
+}
+
+.button {
+  border-radius: 4px;
+  font-size: 16px;
+  color: $button-text;
+  cursor: pointer;
+}
+.button-alt {
+  border-radius: 4px;
+  font-size: 16px;
+  color: $white-bkgd;
+  cursor: pointer;
+}
+
+.button-noborder{
+  font-size: 16px;
+  color: $subdued-text;
+  cursor:pointer;
+    &:hover {
+        background-color: darken($input-bkgd, 5%);
+    }
+}
+.button-green {
+  border-radius: 4px;
+  font-size: 16px;
+  color: $white-bkgd;
+  border: 1px solid $gray-border;
+  width:90px;
+  height:40px;
+  background: $pale-green;
+  cursor:pointer;
+  margin-left:20px;
+    &:hover {
+        background-color: darken($pale-green, 5%);
+    }
+}
+.marginright30{margin-right:20px;}
+
+.marg{margin-left:20px;
+    float:left;
+    color:white;
+    font-size: 16px;
+    cursor:pointer;
+}
+
+input {
+  background: $input-bkgd;
+  line-height: 14px;
+  border: none;
+  box-shadow: none;
+  padding-left: 10px;
+  border-radius: 4px;
+  &[type="email"], &[type="text"]{
+    height: 35px;
+  }
+  &[type="password"]{
+    height: 35px;
+  }
+  &[type="file"]{
+    background: transparent;
+  }
+  &[type="button"]{
+    cursor: pointer;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 4px;
+  }
+}
+
+.stage {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 99;
+  min-height: 100%;
+  top: 50px;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+
+// increase the z-index of the google autocomplete dropdown
+.pac-container {
+  z-index: 999;
+}
+
+
+.menuitem{
+  cursor: pointer;
+}
+
+
+.account-settings{
+
+  width: 600px;
+  left: 50%;
+  margin-left: -300px;
+  font-size: 16px;
+  line-height: 35px;
+  margin-top: 80px;
+  z-index: 999;
+  padding: 0 20px 20px 40px;
+  background: #ffffff;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 2px 3px 8px #000;
+  .row{ height: auto; }
+  .transparent{ color: transparent; }
+  .title{
+    &.main{ margin-left: -20px;}
+    font-size: 20px;
+    line-height: 24px;
+    color: $title-color-secondary;
+  }
+  .edit-line{
+    width: 95%;
+    margin-top: 10px;
+    .editing-subtitle{
+      width: 140px;
+      padding: 0!important;
+    }
+    input[type='password']{
+      width: 185px;
+      height: 40px;
+      line-height: 22px;
+    }
+    input[type='email']{
+      width: 360px;
+      height: 40px;
+    }
+    input[type='text']{
+      width: 175px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    #acct-confirm-password{
+      margin-left: 140px;
+      margin-top: 5px;
+    }
+  }
+
+  @media only screen and (max-width: $screen-xs-max) {
+    width: 80%;
+    left: 10%;
+    margin-left: 0;
+    font-size: 13px;
+    line-height: 25px;
+    .editing-subtitle{ margin-left: -10px;}
+    #acct-confirm-password{ margin-left: 0!important; }
+    input[type='email']{ width: 100%!important;}
+    input[type='text']{ width: 100%!important; margin-bottom: 5px;}
+    input[type='password']{ width: 100%!important; margin-bottom: 5px;}
+    #save-account-settings{ width: 100px!important;}
+  }
+
+  .update-buttons {
+    position: relative;
+    input[type="button"]{
+      &:disabled{
+        opacity: 0.6;
+        cursor: default;
+      }
+    }
+    #delete-account{
+      float: left;
+      margin-left: -50px;
+      &:hover{
+        color: red;
+      }
+    }
+    #save-account-settings{
+      border: 1px solid $gray-border;
+      width:120px;
+      height:40px;
+      background: $pale-green;
+      cursor:pointer;
+
+      margin-right: -25px;
+      &:hover {
+        background-color: darken($pale-green, 5%);
+      }
+    }
+  }
+}
+
+#confirm-delete-modal{
+   z-index: 999;
+   position: absolute;
+   width: 290px;
+   left: 50%;
+   margin: 100px -145px;
+   height: 240px;
+   padding: 30px;
+   background: #ffffff;
+   border-radius: 8px;
+   font-size: 14px;
+   box-shadow: 2px 3px 8px #000;
+   line-height: 18px;
+   #disable-profiles{
+     float: left;
+   }
+   input{ font-size: 12px; }
+}
+
+.wrapword{
+  white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  white-space: pre-wrap;       /* css-3 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  word-break: break-all;
+  white-space: normal;
+}
+
+.titlemargin{
+  position:absolute;
+  margin-left: -20px;
+}
+
+#thankyou-message{
+  cursor: pointer;
+  display:none;
+  position:fixed;
+  padding: 0 40px;
+  z-index: 9999;
+  top: 50%;
+  margin-top: -40px;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 68px;
+  background: $white-bkgd;
+  border-radius: 2px;
+  font-size: 18px;
+  line-height: 70px;
+  box-shadow: 2px 3px 8px #333;
+  .thanks{
+      color:$title-color-secondary;
+      font-size: 20px;
+  }
+}

@@ -1,0 +1,112 @@
+////////////////////////////////////////////////////////////////////////////////
+///////////
+//////////  imports & resets
+/////////
+////////////////////////////////////////////////////////////////////////////////
+
+@import "compass/css3";
+@import "compass/reset";
+
+body{
+  font-family: Roboto!important;
+  font-size: 16px!important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.wrapper {
+  z-index: 9999;
+  text-align: center;
+}
+.clickable{
+  cursor: pointer;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+///////////
+//////////  Color $variables
+/////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+$AcrossMold-blue: rgb(63,112,190);
+$title-color-primary: lighten($AcrossMold-blue, 5); //used in logo, hover states
+$title-color-secondary: $AcrossMold-blue; //used in headings, nav arrows
+
+$white-bkgd: #ffffff;
+$dulled-bkgd: #f1efea;
+$more-dulled-bkgd: #e3e0d8; //i.e., 'back to search button'
+$pale-green: #78c8a1;
+$input-bkgd: #e4e4e0;
+
+$bolded-text: #9c9792;
+$inactive-text: #cbc5c0;
+$subdued-text: #8d897d;
+$darker-text: #5c5c5a;
+
+$photo-subtitle: rgba(92,92,90,0.8);
+$photo-subtitle-opaque: rgba(92,92,90, 0.9);
+$photo-subtitle-text: #b3afaf;
+
+$gray-border: #ebe9e8;
+$gray-dark: #333;
+$gray-light: #999999;
+
+$button-text: #81301a;
+$dasboard-sub-nav: #fcfaf8;
+
+//microsite colors
+
+$bkgd-one: #f2f2f2;
+$skill-tab-header: #414141;
+$white-opacity: rgba(255, 255, 255, 0.6);
+$white-opacity2: rgba(255, 255, 255, 0.2);
+$black-opacity: rgba(0, 0, 0, 0.6);
+$dark-gray: #353535;
+$white-text: rgba(255,255,255,0.9);
+$text-outline: 1px 1px 1px #222;
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+///////////
+//////////  @mixins & @includes
+/////////
+////////////////////////////////////////////////////////////////////////////////
+
+//crazy awesome media query stuff
+//thanks to the sass way
+//http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
+$break-small: 320px; //modify these with proper sizes
+$break-ipad: 768px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+  @media only screen and (max-width: $break-small) { @content; }
+  }
+  @if $media == ipad {
+  @media only screen and (max-width: $break-ipad) { @content; }
+  }
+  @else if $media == medium-screens {
+  @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+  @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+.center{
+  text-align: center;
+}
+//mixin inclusion example
+.profile-pic {
+  float: left;
+  width: 250px;
+  @include respond-to(handhelds) { width: 100% ;}
+  @include respond-to(medium-screens) { width: 125px; }
+  @include respond-to(wide-screens) { float: none; }
+}

@@ -1,0 +1,185 @@
+/*
+                         _           _         _
+                        | |         | |       | |
+ ___  ___  __ _ _ __ ___| |__    ___| |_ _   _| | ___ ___
+/ __|/ _ \/ _` | '__/ __| '_ \  / __| __| | | | |/ _ \ __|
+\__ \  __/ (_| | | | (__| | | | \__ \ |_| |_| | |  __\__ \
+|___/\___|\__,_|_|  \___|_| |_| |___/\__|\__, |_|\___|___/
+                                          __/ |
+                                          |___/
+*/
+
+
+.search-master {
+  margin: 10px auto 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1150px;
+  text-align: left;
+}
+
+
+.search-results-container {
+  margin-right: 40px;
+  margin-top: 16px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.favorite-panel,
+.search-result-panel {
+
+  min-height: 210px;
+  margin: 40px 0;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+  position: relative;
+  text-align: left;
+  .profile-image-box{
+    position: relative;
+    width: 100%;
+    margin-right: 10px;
+    max-width: 200px;
+    max-height: 200px;
+    &:before{
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+    .profile-image-container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-repeat: no-repeat!important;
+      background-size: cover!important;
+    }
+  }
+  &:hover .profile-image-container{
+    border: 1px solid $title-color-secondary !important;
+    float: left;
+  }
+  .likes{
+    float: right;
+    font-size: 16px;
+    margin-top: 3px;
+    color: $title-color-secondary;
+    .counter{
+      font-weight: 400;
+    }
+    .label{
+      font-weight: 200;
+    }
+  }
+  .content {
+    vertical-align: top;
+    float: left;
+    padding-bottom: 20px;
+    right: 0;
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    .orgs {
+      font-size: 16px;
+      font-style: italic;
+    }
+    .subtitle {
+      color: $subdued-text;
+      font-size: 16px;
+      margin-bottom: 10px;
+      line-height: 18px;
+      .heading {
+        color: darken($subdued-text, 20%);
+        font-weight: bold;
+      }
+    }
+
+    .profile-location{
+      @media only screen and (max-width: $screen-xs-max) { width: 48%;}
+    }
+
+    .bottom-buttons {
+      @media only screen and (max-width: $screen-xs-max) {
+        position: absolute;
+        margin-top: -50px;
+        right: 0;
+        width: 48%;
+      }
+
+      margin-top: -5px;
+      height: 40px;
+      .button-link {
+        position: relative;
+        float: right;
+        background: transparent;
+        text-decoration: underline;
+        &:hover{
+          font-style: underline;
+        }
+      }
+      .button-red {
+        position: relative;
+        width: 130px;
+        @media only screen and (max-width: $screen-xs-max) {
+          width: 107px;
+        }
+        color: #fff;
+        display: inline;
+        float: right;
+        background: $title-color-secondary;
+        &:hover {
+          background: darken($title-color-secondary, 5%);
+        }
+      }
+    }
+    .it-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      img{
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+  }
+
+}
+.ad-space-container{
+  width: 200px;
+  margin-top: 23px;
+  // border: 1px solid blue;
+  display: inline-block;
+  .example-ad {
+    background: white;
+    margin-bottom: 20px;
+    img {
+    height: 200px;
+    width: 200px;
+    // border: 1px solid red;
+    }
+
+  }
+}
+
+
+
+
+.search-subnav {
+  width: 700px;
+  height: 50px;
+  // border: 1px solid red;
+  input {
+    width: 130px;
+    color: #fff;
+    font-size: 16px;
+    display: inline;
+    background: $title-color-secondary;
+    &:hover {
+      background: darken($title-color-secondary, 5%);
+    }
+    margin-right: 10px;
+  }
+}
