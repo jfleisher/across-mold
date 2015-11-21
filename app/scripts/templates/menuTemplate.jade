@@ -1,32 +1,32 @@
 div
-  div.logo.col-sm-offset-1.col-xs-offset-0.col-sm-offset-1.col-md-offset-2.col-xs-4.col-sm-3
-    img#AcrossMold-logo(src="images/logos/logo.png")
+  div.empty-divider.col-xs-0.col-sm-1
+  div.col-xs-6.col-sm-5
+    div.logo
+      img#AcrossMold-logo(src="images/logos/logo.png")
 
+  div.col-xs-6.col-sm-5
+    div#header-get-quote.button.hidden-xs
+      |Get a Quotation
+    
+    if user
+      div#account-icon
+        - var imgSrc = user.get("accountPictureUrl")
+        img(src="images/account-icon.png")
 
-  div#header-get-quote.col-sm-2.col-xs-3
-    Get a Quotation
-  
-  if user
-    div#account-icon.col-sm-2.col-xs-3
-      - var imgSrc = user.get("accountPictureUrl")
-      img(src="images/account-icon.png")
-
-    div#account-dropdown.col-sm-2.col-xs-3
-      ul
-        li.menuitem
-          a(href="#/dashboard") My Dashboard
-          span.ss-desktop
-        hr
-        li.menuitem
-          a#edit-account Account Settings
-          span.ss-info
-        hr
-        li.menuitem
-          //- nav to microsite on logout for now
-          a#logout Log Out
-          span.ss-lock
-  else
-    &nbsp;
-    &nbsp;
-    a#menu-log-in.col-sm-2.col-xs-3
-      |Log&nbsp;In
+      div#account-dropdown
+        ul
+          li.menuitem
+            a(href="#/dashboard") My Dashboard
+            span.ss-desktop
+          hr
+          li.menuitem
+            a#edit-account Account Settings
+            span.ss-info
+          hr
+          li.menuitem
+            //- nav to microsite on logout for now
+            a#logout Log Out
+            span.ss-lock
+    else
+      a#menu-log-in
+        |Log&nbsp;In

@@ -234,13 +234,6 @@ button:focus {
 
 /* line 7, ../../app/styles/_menubar.scss */
 
-#AcrossMold-logo {
-  cursor: pointer;
-  height: 40px;
-}
-
-/* line 12, ../../app/styles/_menubar.scss */
-
 .fixed-navbar {
   position: fixed;
   top: 0;
@@ -249,11 +242,11 @@ button:focus {
   background: #272e37;
   z-index: 998;
   text-align: center;
-  height: 50px;
+  height: 70px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* line 23, ../../app/styles/_menubar.scss */
+/* line 18, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .select2-container-multi .select2-choices {
   width: 265px !important;
@@ -270,7 +263,7 @@ button:focus {
   padding-left: 10px !important;
 }
 
-/* line 35, ../../app/styles/_menubar.scss */
+/* line 30, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .select2-container-multi .select2-choices .select2-search-choice {
   width: auto;
@@ -284,27 +277,79 @@ button:focus {
   line-height: 21px;
 }
 
-/* line 49, ../../app/styles/_menubar.scss */
+/* line 44, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .nav-content {
-  height: 40px;
-  margin-top: 6px;
   position: relative;
   display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-/* line 54, ../../app/styles/_menubar.scss */
+/* line 52, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .nav-content .logo {
-  vertical-align: top;
-  padding-right: 10px;
-  display: inline-block;
-  margin-top: 0;
-  position: relative;
-  float: left;
+  height: 70px;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
 }
 
-/* line 62, ../../app/styles/_menubar.scss */
+/* line 58, ../../app/styles/_menubar.scss */
+
+.fixed-navbar .nav-content .button {
+  background-color: #214487;
+  color: white;
+  width: 175px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* line 68, ../../app/styles/_menubar.scss */
+
+.fixed-navbar .nav-content #header-get-quote {
+  position: absolute;
+  right: 70px;
+}
+
+/* line 72, ../../app/styles/_menubar.scss */
+
+.fixed-navbar .nav-content #menu-log-in {
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  line-height: 70px;
+  position: absolute;
+  right: 0;
+}
+
+/* line 81, ../../app/styles/_menubar.scss */
+
+.fixed-navbar .nav-content .log-btn {
+  position: absolute;
+  border: 1px solid #ebe9e8;
+  top: 14px;
+  left: 240px;
+  width: 120px;
+  height: 40px;
+  background: #214487;
+  color: white;
+  cursor: pointer;
+}
+
+/* line 91, ../../app/styles/_menubar.scss */
+
+.fixed-navbar .nav-content .log-btn:hover {
+  background-color: #1c3a73;
+}
+
+/* line 97, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .nav-content .search {
   margin-top: -8px;
@@ -315,7 +360,7 @@ button:focus {
   float: right;
 }
 
-/* line 69, ../../app/styles/_menubar.scss */
+/* line 104, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .nav-content .search .primary-input {
   width: 300px;
@@ -324,7 +369,7 @@ button:focus {
   line-height: 18px;
 }
 
-/* line 75, ../../app/styles/_menubar.scss */
+/* line 110, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .nav-content .search .location-input {
   width: 200px;
@@ -333,13 +378,13 @@ button:focus {
   line-height: 18px;
 }
 
-/* line 85, ../../app/styles/_menubar.scss */
+/* line 120, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .ui-helper-hidden-accessible {
   display: none;
 }
 
-/* line 86, ../../app/styles/_menubar.scss */
+/* line 121, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .ui-autocomplete {
   top: 43px !important;
@@ -351,7 +396,7 @@ button:focus {
   font-size: 16px !important;
 }
 
-/* line 94, ../../app/styles/_menubar.scss */
+/* line 129, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .ui-autocomplete .ui-menu-item {
   cursor: default;
@@ -368,13 +413,13 @@ button:focus {
   border-radius: 0 !important;
 }
 
-/* line 107, ../../app/styles/_menubar.scss */
+/* line 142, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .ui-autocomplete .ui-menu-item a {
   color: #333;
 }
 
-/* line 108, ../../app/styles/_menubar.scss */
+/* line 143, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .ui-autocomplete .ui-menu-item .ui-state-focus {
   background: #ebf2fe !important;
@@ -382,20 +427,20 @@ button:focus {
   border-radius: 0 !important;
 }
 
-/* line 116, ../../app/styles/_menubar.scss */
+/* line 151, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .pac-container {
   font-family: Roboto !important;
   font-size: 16px !important;
 }
 
-/* line 122, ../../app/styles/_menubar.scss */
+/* line 157, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .logo img {
   margin-right: 20px;
 }
 
-/* line 136, ../../app/styles/_menubar.scss */
+/* line 171, ../../app/styles/_menubar.scss */
 
 .fixed-navbar #account-icon {
   position: absolute;
@@ -403,7 +448,7 @@ button:focus {
   right: 0;
 }
 
-/* line 141, ../../app/styles/_menubar.scss */
+/* line 176, ../../app/styles/_menubar.scss */
 
 .fixed-navbar #account-icon img {
   border: 1px solid #ebe9e8;
@@ -412,7 +457,7 @@ button:focus {
   height: 40px;
 }
 
-/* line 149, ../../app/styles/_menubar.scss */
+/* line 184, ../../app/styles/_menubar.scss */
 
 .fixed-navbar #account-dropdown {
   padding: 15px 8px 10px 8px;
@@ -428,56 +473,27 @@ button:focus {
   font-size: 18px;
 }
 
-/* line 161, ../../app/styles/_menubar.scss */
+/* line 196, ../../app/styles/_menubar.scss */
 
 .fixed-navbar #account-dropdown a {
   color: #8d897d;
 }
 
-/* line 165, ../../app/styles/_menubar.scss */
+/* line 200, ../../app/styles/_menubar.scss */
 
 .fixed-navbar #account-dropdown span {
   float: right;
-  color: #3f70be;
+  color: #214487;
 }
 
-/* line 171, ../../app/styles/_menubar.scss */
+/* line 206, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .active-border {
-  border: 1px solid #3f70be !important;
+  border: 1px solid #214487 !important;
   border-radius: 20px;
 }
 
-/* line 179, ../../app/styles/_menubar.scss */
-
-.fixed-navbar #menu-log-in {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  cursor: pointer;
-}
-
-/* line 186, ../../app/styles/_menubar.scss */
-
-.fixed-navbar .log-btn {
-  position: absolute;
-  border: 1px solid #ebe9e8;
-  top: 14px;
-  left: 240px;
-  width: 120px;
-  height: 40px;
-  background: #3f70be;
-  color: white;
-  cursor: pointer;
-}
-
-/* line 196, ../../app/styles/_menubar.scss */
-
-.fixed-navbar .log-btn:hover {
-  background-color: #3965ab;
-}
-
-/* line 208, ../../app/styles/_menubar.scss */
+/* line 222, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview {
   display: none;
@@ -490,7 +506,7 @@ button:focus {
   font-size: 14px;
 }
 
-/* line 217, ../../app/styles/_menubar.scss */
+/* line 231, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview .logo {
   display: inline-block;
@@ -499,7 +515,7 @@ button:focus {
   padding: 0;
 }
 
-/* line 223, ../../app/styles/_menubar.scss */
+/* line 237, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #usermenu {
   position: fixed;
@@ -508,19 +524,19 @@ button:focus {
   padding: 10px;
 }
 
-/* line 228, ../../app/styles/_menubar.scss */
+/* line 242, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #usermenu:hover {
   background-color: #b3b3b3;
 }
 
-/* line 231, ../../app/styles/_menubar.scss */
+/* line 245, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #usermenu.depressed {
   background-color: #b3b3b3;
 }
 
-/* line 234, ../../app/styles/_menubar.scss */
+/* line 248, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #usermenu .usermenu_icon {
   background-image: url(../images/account-icon.png);
@@ -530,7 +546,7 @@ button:focus {
   height: 30px;
 }
 
-/* line 242, ../../app/styles/_menubar.scss */
+/* line 256, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview .dropdown {
   background-color: #333;
@@ -545,7 +561,7 @@ button:focus {
   border-bottom: 3px solid #b3b3b3;
 }
 
-/* line 253, ../../app/styles/_menubar.scss */
+/* line 267, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview .dropdown input[type="text"],
 .fixed-navbar .mobileview .dropdown input[type="password"],
@@ -556,7 +572,7 @@ button:focus {
   height: 35px;
 }
 
-/* line 259, ../../app/styles/_menubar.scss */
+/* line 273, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview .dropdown input[type='button'] {
   margin-right: 10%;
@@ -564,7 +580,7 @@ button:focus {
   height: 32px;
 }
 
-/* line 266, ../../app/styles/_menubar.scss */
+/* line 280, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #usermenuDropdown a.login {
   color: #999999;
@@ -573,7 +589,7 @@ button:focus {
   margin-left: 18%;
 }
 
-/* line 272, ../../app/styles/_menubar.scss */
+/* line 286, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #usermenuDropdown.logged-in {
   width: 270px;
@@ -582,13 +598,13 @@ button:focus {
   padding-bottom: 10px;
 }
 
-/* line 277, ../../app/styles/_menubar.scss */
+/* line 291, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #usermenuDropdown.logged-in ul {
   width: 100%;
 }
 
-/* line 279, ../../app/styles/_menubar.scss */
+/* line 293, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #usermenuDropdown.logged-in ul li {
   color: #999999;
@@ -603,7 +619,7 @@ button:focus {
   padding-bottom: 10px;
 }
 
-/* line 290, ../../app/styles/_menubar.scss */
+/* line 304, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #usermenuDropdown.logged-in ul li:hover,
 .fixed-navbar .mobileview #usermenuDropdown.logged-in ul li:hover a {
@@ -611,7 +627,7 @@ button:focus {
   color: #333;
 }
 
-/* line 295, ../../app/styles/_menubar.scss */
+/* line 309, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #usermenuDropdown.logged-in ul li div.ss-desktop,
 .fixed-navbar .mobileview #usermenuDropdown.logged-in ul li div.ss-lock,
@@ -622,7 +638,7 @@ button:focus {
   margin-right: 5px;
 }
 
-/* line 303, ../../app/styles/_menubar.scss */
+/* line 317, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #usermenuDropdown.logged-in ul li a {
   font-size: 20px;
@@ -630,7 +646,7 @@ button:focus {
   color: #999999;
 }
 
-/* line 312, ../../app/styles/_menubar.scss */
+/* line 326, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #searchmenu {
   position: fixed;
@@ -639,19 +655,19 @@ button:focus {
   padding: 10px;
 }
 
-/* line 317, ../../app/styles/_menubar.scss */
+/* line 331, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #searchmenu:hover {
   background-color: #b3b3b3;
 }
 
-/* line 320, ../../app/styles/_menubar.scss */
+/* line 334, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #searchmenu.depressed {
   background-color: #b3b3b3;
 }
 
-/* line 323, ../../app/styles/_menubar.scss */
+/* line 337, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #searchmenu .searchmenu_icon {
   background-image: url(../images/search-icon.png);
@@ -661,13 +677,13 @@ button:focus {
   height: 30px;
 }
 
-/* line 332, ../../app/styles/_menubar.scss */
+/* line 346, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #searchmenuDropdown .ui-helper-hidden-accessible {
   display: none;
 }
 
-/* line 333, ../../app/styles/_menubar.scss */
+/* line 347, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #searchmenuDropdown .ui-autocomplete {
   top: 63px !important;
@@ -679,7 +695,7 @@ button:focus {
   font-size: 16px !important;
 }
 
-/* line 341, ../../app/styles/_menubar.scss */
+/* line 355, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #searchmenuDropdown .ui-autocomplete .ui-menu-item {
   cursor: default;
@@ -696,14 +712,14 @@ button:focus {
   border-radius: 0 !important;
 }
 
-/* line 354, ../../app/styles/_menubar.scss */
+/* line 368, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #searchmenuDropdown .ui-autocomplete .ui-menu-item a {
   color: #333;
   width: 100%;
 }
 
-/* line 355, ../../app/styles/_menubar.scss */
+/* line 369, ../../app/styles/_menubar.scss */
 
 .fixed-navbar .mobileview #searchmenuDropdown .ui-autocomplete .ui-menu-item .ui-state-focus {
   background: #ebf2fe !important;
@@ -711,7 +727,7 @@ button:focus {
   border-radius: 0 !important;
 }
 
-/* line 377, ../../app/styles/_menubar.scss */
+/* line 391, ../../app/styles/_menubar.scss */
 
 #site-message-modal .modal-dialog {
   z-index: 9999;
@@ -724,13 +740,13 @@ button:focus {
   width: 400px;
 }
 
-/* line 386, ../../app/styles/_menubar.scss */
+/* line 400, ../../app/styles/_menubar.scss */
 
 #site-message-modal .modal-dialog #site-message {
   margin: 30px;
 }
 
-/* line 390, ../../app/styles/_menubar.scss */
+/* line 404, ../../app/styles/_menubar.scss */
 
 #site-message-modal input[type="button"] {
   position: absolute;
@@ -743,13 +759,13 @@ button:focus {
   cursor: pointer;
 }
 
-/* line 399, ../../app/styles/_menubar.scss */
+/* line 413, ../../app/styles/_menubar.scss */
 
 #site-message-modal input[type="button"]:hover {
   background-color: #f2f2f2;
 }
 
-/* line 403, ../../app/styles/_menubar.scss */
+/* line 417, ../../app/styles/_menubar.scss */
 
 #site-message-modal .working-animation {
   background-image: url(../images/Loading.gif);
@@ -905,7 +921,7 @@ button:focus {
 /* line 89, ../../app/styles/_profilepage.scss */
 
 .profile-subtitle {
-  color: #3f70be;
+  color: #214487;
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -920,7 +936,7 @@ button:focus {
 /* line 99, ../../app/styles/_profilepage.scss */
 
 .profile-title {
-  color: #3f70be;
+  color: #214487;
   font-size: 22px;
   margin-bottom: 10px;
 }
@@ -929,7 +945,7 @@ button:focus {
 
 .title-name {
   font-weight: 500;
-  color: #3f70be;
+  color: #214487;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -984,7 +1000,7 @@ button:focus {
 
 .title-orgs {
   font-size: 18px;
-  color: #3f70be;
+  color: #214487;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1092,7 +1108,7 @@ button:focus {
   background: #ffffff;
   border-radius: 5px;
   border: 1px solid #ebe9e8;
-  color: #3f70be;
+  color: #214487;
   font-weight: 300;
   font-size: 18px;
   padding: 15px;
@@ -1244,7 +1260,7 @@ button:focus {
 
 .sub-heading-nav .skill-button-container .skill-button.active,
 .sub-heading-nav .skill-button-container .skill-button:hover {
-  color: #3f70be;
+  color: #214487;
 }
 
 /* line 285, ../../app/styles/_profilepage.scss */
@@ -1283,7 +1299,7 @@ button:focus {
 /* line 318, ../../app/styles/_profilepage.scss */
 
 .active a {
-  color: #3f70be !important;
+  color: #214487 !important;
 }
 
 /* line 323, ../../app/styles/_profilepage.scss */
@@ -1532,19 +1548,19 @@ button:focus {
 /* line 463, ../../app/styles/_profilepage.scss */
 
 .tab-navigation .tab-button.active {
-  color: #3f70be;
+  color: #214487;
 }
 
 /* line 464, ../../app/styles/_profilepage.scss */
 
 .tab-navigation .tab-button:active {
-  color: #3f70be;
+  color: #214487;
 }
 
 /* line 465, ../../app/styles/_profilepage.scss */
 
 .tab-navigation .tab-button:hover {
-  color: #3f70be;
+  color: #214487;
   text-decoration: underline;
 }
 
@@ -2512,7 +2528,7 @@ button:focus {
 
 .editing-title {
   font-size: 20px;
-  color: #3f70be;
+  color: #214487;
   position: absolute;
 }
 
@@ -2554,7 +2570,7 @@ button:focus {
 
 .contactemail {
   font-size: 20px;
-  color: #3f70be;
+  color: #214487;
   left: 0px;
   text-align: left;
   padding: 30px;
@@ -3057,7 +3073,7 @@ span.privacy-select {
   font-size: 11px;
   text-align: center;
   margin-top: -5px;
-  color: #3f70be;
+  color: #214487;
   padding: 0;
 }
 
@@ -3424,7 +3440,7 @@ span.privacy-select {
 .milestone-bar .left-title {
   float: left;
   font-size: 22px;
-  color: #3f70be;
+  color: #214487;
   margin-top: 7px;
   margin-left: 10px;
 }
@@ -3515,13 +3531,13 @@ span.privacy-select {
   width: 200px;
   color: #fff;
   font-size: 16px;
-  background: #3f70be;
+  background: #214487;
 }
 
 /* line 1638, ../../app/styles/_profilepage.scss */
 
 .skill-continue-button:hover {
-  background: #3965ab;
+  background: #1c3a73;
 }
 
 /* line 1650, ../../app/styles/_profilepage.scss */
@@ -3565,7 +3581,7 @@ span.privacy-select {
   border: 1px solid #ebe9e8;
   width: 120px;
   height: 40px;
-  background: #3f70be;
+  background: #214487;
   cursor: pointer;
 }
 
@@ -3609,7 +3625,7 @@ span.privacy-select {
   border: 1px solid #ebe9e8;
   width: 120px;
   height: 40px;
-  background: #3f70be;
+  background: #214487;
   cursor: pointer;
 }
 
@@ -3647,7 +3663,7 @@ span.privacy-select {
   border: 1px solid #ebe9e8;
   width: 120px;
   height: 40px;
-  background: #3f70be;
+  background: #214487;
   cursor: pointer;
 }
 
@@ -3683,7 +3699,7 @@ span.privacy-select {
 /* line 1767, ../../app/styles/_profilepage.scss */
 
 .deleteSkill-subtitle {
-  color: #3f70be;
+  color: #214487;
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -3704,7 +3720,7 @@ span.privacy-select {
   margin-top: 0;
   width: 120px;
   height: 40px;
-  background: #3f70be;
+  background: #214487;
   border: 1px solid #ebe9e8;
   cursor: pointer;
 }
@@ -3776,7 +3792,7 @@ span.privacy-select {
 /* line 1840, ../../app/styles/_profilepage.scss */
 
 .share-profile-modal #share-divide #share-divide-orange {
-  background: #3f70be;
+  background: #214487;
   width: 60px;
   height: 1px;
   left: 0px;
@@ -3887,7 +3903,7 @@ span.privacy-select {
   font-size: 30px;
   text-align: center;
   margin-bottom: 20px;
-  color: #3f70be;
+  color: #214487;
 }
 
 @media only screen and (max-width: 767px) {
@@ -3978,7 +3994,7 @@ span.privacy-select {
 /* line 80, ../../app/styles/_registrationpage.scss */
 
 .terms-of-service .terms-text {
-  color: #3f70be;
+  color: #214487;
   font-weight: 300;
   margin-left: 5px;
 }
@@ -3991,7 +4007,7 @@ span.privacy-select {
   position: relative;
   color: #fff;
   font-size: 16px;
-  background: #3f70be;
+  background: #214487;
   margin-bottom: 35px;
   margin-top: 35px;
 }
@@ -3999,7 +4015,7 @@ span.privacy-select {
 /* line 95, ../../app/styles/_registrationpage.scss */
 
 .registration-button:hover {
-  background: #3965ab;
+  background: #1c3a73;
 }
 
 /* line 108, ../../app/styles/_registrationpage.scss */
@@ -4041,14 +4057,14 @@ span.privacy-select {
 /* line 135, ../../app/styles/_registrationpage.scss */
 
 .profile-button:hover {
-  background: #3f70be !important;
+  background: #214487 !important;
   opacity: 0.7;
 }
 
 /* line 141, ../../app/styles/_registrationpage.scss */
 
 .selected-profile {
-  background: #3f70be !important;
+  background: #214487 !important;
   opacity: 1 !important;
 }
 
@@ -4077,7 +4093,7 @@ span.privacy-select {
   width: 200px;
   color: #fff;
   font-size: 16px;
-  background: #3f70be;
+  background: #214487;
   margin-bottom: 20px;
 }
 
@@ -4085,7 +4101,7 @@ span.privacy-select {
 
 #submit-registration-3:hover,
 #create-new-profile:hover {
-  background: #3965ab;
+  background: #1c3a73;
 }
 
 /* line 175, ../../app/styles/_registrationpage.scss */
@@ -4098,7 +4114,7 @@ span.privacy-select {
 /* line 178, ../../app/styles/_registrationpage.scss */
 
 .continue-button-section .red-text {
-  color: #3f70be;
+  color: #214487;
   font-weight: 300;
   margin-right: 20px;
 }
@@ -4106,7 +4122,7 @@ span.privacy-select {
 /* line 185, ../../app/styles/_registrationpage.scss */
 
 .underage-warning {
-  background: #3f70be;
+  background: #214487;
   color: #fff;
   width: 110%;
   margin-left: -5%;
@@ -4877,7 +4893,7 @@ button.close {
 /* line 378, ../../app/styles/_microsite.scss */
 
 .microsite-landing-title {
-  color: #3f70be;
+  color: #214487;
   font-size: 25px;
   padding: 10px;
 }
@@ -4900,7 +4916,7 @@ button.close {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #3f70be;
+  color: #214487;
   margin-top: 10px;
 }
 
@@ -4910,7 +4926,7 @@ button.close {
   font-size: 20px;
   font-style: italic;
   margin: 20px 0 10px 0;
-  color: #3f70be;
+  color: #214487;
   font-weight: 400;
 }
 
@@ -5005,7 +5021,7 @@ button.close {
 /* line 442, ../../app/styles/_microsite.scss */
 
 .microsite-content .landing-contentslide .subhead {
-  color: #3f70be;
+  color: #214487;
   font-weight: 500;
   text-align: left;
 }
@@ -5163,7 +5179,7 @@ button.close {
 .action-btn {
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 1px 1px 1px #222;
-  background-color: #3f70be;
+  background-color: #214487;
   cursor: pointer;
   border-radius: 8px;
 }
@@ -5422,7 +5438,7 @@ button.close {
 
 .help-pages-background .contact-us .contact-button {
   font-size: 16px;
-  background-color: #3f70be;
+  background-color: #214487;
   border-radius: 5px;
   height: auto;
   width: auto;
@@ -5442,7 +5458,7 @@ button.close {
 /* line 688, ../../app/styles/_microsite.scss */
 
 .help-pages-background .contact-us .contact-button:hover {
-  background-color: #325998;
+  background-color: #172f5e;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -5907,7 +5923,7 @@ button.close {
 /* line 912, ../../app/styles/_microsite.scss */
 
 .sales-textdiv .subhead {
-  color: #3f70be;
+  color: #214487;
   font-weight: 500;
   text-align: left;
 }
@@ -5971,7 +5987,7 @@ button.close {
 /* line 956, ../../app/styles/_microsite.scss */
 
 .microsite-panel-sales .overlay {
-  color: #3f70be;
+  color: #214487;
   opacity: 0.8;
   position: absolute;
   width: 100%;
@@ -6283,7 +6299,7 @@ button.close {
 .profile-image {
   width: 60px;
   height: 60px;
-  border: 1px solid #3f70be;
+  border: 1px solid #214487;
   position: relative;
   top: 20px;
   left: 20px;
@@ -6328,7 +6344,7 @@ button.close {
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 500;
-  color: #3f70be;
+  color: #214487;
   font-size: 18px;
   margin-right: 5px;
   max-width: 100%;
@@ -6422,7 +6438,7 @@ button.close {
 
 .sub-nav-status {
   float: right;
-  color: #3f70be;
+  color: #214487;
 }
 
 /* line 204, ../../app/styles/_dashboard.scss */
@@ -6463,7 +6479,7 @@ button.close {
 /* line 227, ../../app/styles/_dashboard.scss */
 
 .sub-nav-button:hover {
-  color: #3f70be;
+  color: #214487;
 }
 
 /* line 231, ../../app/styles/_dashboard.scss */
@@ -6610,7 +6626,7 @@ button.close {
 
 .favorite-panel:hover .profile-image-container,
 .search-result-panel:hover .profile-image-container {
-  border: 1px solid #3f70be !important;
+  border: 1px solid #214487 !important;
   float: left;
 }
 
@@ -6621,7 +6637,7 @@ button.close {
   float: right;
   font-size: 16px;
   margin-top: 3px;
-  color: #3f70be;
+  color: #214487;
 }
 
 /* line 69, ../../app/styles/_search.scss */
@@ -6732,7 +6748,7 @@ button.close {
   color: #fff;
   display: inline;
   float: right;
-  background: #3f70be;
+  background: #214487;
 }
 
 @media only screen and (max-width: 767px) {
@@ -6748,7 +6764,7 @@ button.close {
 
 .favorite-panel .content .bottom-buttons .button-red:hover,
 .search-result-panel .content .bottom-buttons .button-red:hover {
-  background: #3965ab;
+  background: #1c3a73;
 }
 
 /* line 137, ../../app/styles/_search.scss */
@@ -6804,14 +6820,14 @@ button.close {
   color: #fff;
   font-size: 16px;
   display: inline;
-  background: #3f70be;
+  background: #214487;
   margin-right: 10px;
 }
 
 /* line 180, ../../app/styles/_search.scss */
 
 .search-subnav input:hover {
-  background: #3965ab;
+  background: #1c3a73;
 }
 
 /* line 1, ../../app/styles/_bootstrap-modal.scss */
@@ -9747,7 +9763,7 @@ input#quotation_button {
 #edit-quotation .heading {
   font-size: 30px !important;
   opacity: 0.90;
-  color: #3f70be;
+  color: #214487;
   text-align: left;
   padding: 0;
   margin-bottom: 15px;
@@ -9789,14 +9805,14 @@ input#quotation_button {
 
 #edit-quotation #add-quotation-doc {
   display: block;
-  color: #3f70be;
+  color: #214487;
   cursor: pointer;
 }
 
 /* line 46, ../../app/styles/_quotation.scss */
 
 #edit-quotation #add-quotation-doc:hover {
-  color: #2c4e85;
+  color: #12254a;
 }
 
 /* line 48, ../../app/styles/_quotation.scss */
@@ -9855,14 +9871,14 @@ input#quotation_button {
 /* line 81, ../../app/styles/_quotation.scss */
 
 #edit-quotation #quote-attachments .even {
-  background-color: #fdfeff;
+  background-color: #b9cbee;
 }
 
 /* line 84, ../../app/styles/_quotation.scss */
 
 #edit-quotation #quote-attachments .quote-file-remove {
   margin-left: 5px;
-  color: #3f70be;
+  color: #214487;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -9870,7 +9886,7 @@ input#quotation_button {
 /* line 89, ../../app/styles/_quotation.scss */
 
 #edit-quotation #quote-attachments .quote-file-remove:hover {
-  color: #264371;
+  color: #0d1b35;
 }
 
 /* line 1, ../../app/styles/vendor/_cropimg.scss */
@@ -10166,7 +10182,7 @@ input#quotation_button {
 /* line 54, ../../app/styles/main.scss */
 
 .login-layer .login-section {
-  background: #3f70be;
+  background: #214487;
   border: 1px solid white;
   width: 300px;
   height: 200px;
@@ -10344,7 +10360,7 @@ a:active {
 /* line 184, ../../app/styles/main.scss */
 
 .core-button {
-  background: #3f70be;
+  background: #214487;
   border: 1px solid #ebe9e8;
 }
 
@@ -10357,7 +10373,7 @@ a:active {
 /* line 190, ../../app/styles/main.scss */
 
 .core-button:active {
-  background: #325998;
+  background: #172f5e;
 }
 
 /* line 197, ../../app/styles/main.scss */
@@ -10415,7 +10431,7 @@ a:active {
 /* line 231, ../../app/styles/main.scss */
 
 .button-link.active {
-  color: #3f70be;
+  color: #214487;
   text-decoration: underline;
 }
 
@@ -10591,7 +10607,7 @@ input[type="button"] {
 .account-settings .title {
   font-size: 20px;
   line-height: 24px;
-  color: #3f70be;
+  color: #214487;
 }
 
 /* line 343, ../../app/styles/main.scss */
@@ -10814,6 +10830,6 @@ input[type="button"] {
 /* line 470, ../../app/styles/main.scss */
 
 #thankyou-message .thanks {
-  color: #3f70be;
+  color: #214487;
   font-size: 20px;
 }

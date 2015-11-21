@@ -4,11 +4,6 @@
 ///////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-#AcrossMold-logo{
-  cursor: pointer;
-  height: 40px;
-}
-
 .fixed-navbar {
   position: fixed;
   top: 0;
@@ -17,7 +12,7 @@
   background: rgb(39,46,55);
   z-index: 998;
   text-align: center;
-  height: 50px;
+  height: $navbar-height;
   border-bottom: 1px solid rgba(0,0,0,0.1);
 
   .select2-container-multi .select2-choices {
@@ -47,18 +42,58 @@
 
 
   .nav-content  {
-    height: 40px;
-    margin-top: 6px;
     position: relative;
     display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
     .logo{
-      vertical-align: top;
-      padding-right: 10px;
-      display: inline-block;
-      margin-top: 0;
-      position: relative;
-      float: left;
+      height: 70px;
+      cursor: pointer;
+      position: absolute;
+      left: 0;
     }
+    .button{
+      background-color: $AcrossMold-blue;
+      color: white;
+      width: 175px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    #header-get-quote{
+      position: absolute;
+      right: 70px;
+    }
+    #menu-log-in{
+      cursor: pointer;
+      font-size: 18px;
+      color: white;
+      line-height: 70px;
+      position: absolute;
+      right: 0;
+    }
+
+    .log-btn{
+        position:absolute;
+      border: 1px solid $gray-border;
+      top:14px;
+      left:240px;
+      width:120px;
+      height:40px;
+      background: $title-color-secondary;
+      color:white;
+      cursor:pointer;
+      &:hover {
+        background-color: darken($title-color-secondary, 5%);
+      }
+    }
+
+
     .search {
       margin-top: -8px;
       vertical-align: top;
@@ -176,27 +211,6 @@
 
 
 
-  #menu-log-in{
-    position: absolute;
-    top: 10px;
-    right: 0;
-    cursor: pointer;
-  }
-
-  .log-btn{
-      position:absolute;
-    border: 1px solid $gray-border;
-    top:14px;
-    left:240px;
-    width:120px;
-    height:40px;
-    background: $title-color-secondary;
-    color:white;
-    cursor:pointer;
-    &:hover {
-      background-color: darken($title-color-secondary, 5%);
-    }
-  }
 
 
 ////////////////////////////////////////////////////////////////////
