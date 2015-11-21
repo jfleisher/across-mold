@@ -337,23 +337,23 @@ buf.push("</p>");;return buf.join("");
 
 this["JST"]["app/scripts/templates/footer"] = function anonymous(locals) {
 var buf = [];
-buf.push("<div class=\"footer-container container\"><div class=\"footer-links\"><div class=\"right hidden-xs\">©2015 Across Mold LLC</div><div class=\"right\"><a href=\"#/microsite/contactus\">Contact Us</a></div><div class=\"right\"><a href=\"#/microsite/faq\">FAQ</a></div><div class=\"right hidden\"><a href=\"#/microsite/about\">About</a></div><div class=\"right hidden-xs\"><a href=\"#/microsite/terms\">Terms of Use</a></div></div></div>");;return buf.join("");
+buf.push("<div class=\"footer-container container\"><div class=\"footer-links\"><div class=\"right hidden-xs\">©2015 Across Mold Industrial Limited </div><div class=\"right\">Contact Us<!--a(href=\"#/microsite/contactus\") Contact Us--></div><div class=\"right\">FAQ<!--a(href=\"#/microsite/faq\") FAQ--></div><div class=\"right hidden\">About<!--a(href=\"#/microsite/about\") About--></div><div class=\"right hidden-xs\">Terms of Use<!--a(href=\"#/microsite/terms\") Terms of Use--></div></div></div>");;return buf.join("");
 };
 
 this["JST"]["app/scripts/templates/menuTemplate"] = function anonymous(locals) {
 var buf = [];
-var locals_ = (locals || {}),user = locals_.user;buf.push("<div><div class=\"logo col-sm-offset-1 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-xs-4 col-sm-3\"><img id=\"AcrossMold-logo\" src=\"images/logos/logo.png\"/></div><div id=\"header-get-quote\" class=\"col-sm-2 col-xs-3\"><Get>a Quotation</Get></div>");
+var locals_ = (locals || {}),user = locals_.user;buf.push("<div><div class=\"empty-divider col-xs-0 col-sm-1\"></div><div class=\"col-xs-6 col-sm-5\"><div class=\"logo\"><img id=\"AcrossMold-logo\" src=\"images/logos/logo.png\"/></div></div><div class=\"col-xs-6 col-sm-5\"><div id=\"header-get-quote\" class=\"button hidden-xs\">Get a Quotation</div>");
 if ( user)
 {
-buf.push("<div id=\"account-icon\" class=\"col-sm-2 col-xs-3\">");
+buf.push("<div id=\"account-icon\">");
 var imgSrc = user.get("accountPictureUrl")
-buf.push("<img src=\"images/account-icon.png\"/></div><div id=\"account-dropdown\" class=\"col-sm-2 col-xs-3\"><ul><li class=\"menuitem\"><a href=\"#/dashboard\">My Dashboard</a><span class=\"ss-desktop\"></span></li><hr/><li class=\"menuitem\"><a id=\"edit-account\">Account Settings</a><span class=\"ss-info\"></span></li><hr/><li class=\"menuitem\"><a id=\"logout\">Log Out</a><span class=\"ss-lock\"></span></li></ul></div>");
+buf.push("<img src=\"images/account-icon.png\"/></div><div id=\"account-dropdown\"><ul><li class=\"menuitem\"><a href=\"#/dashboard\">My Dashboard</a><span class=\"ss-desktop\"></span></li><hr/><li class=\"menuitem\"><a id=\"edit-account\">Account Settings</a><span class=\"ss-info\"></span></li><hr/><li class=\"menuitem\"><a id=\"logout\">Log Out</a><span class=\"ss-lock\"></span></li></ul></div>");
 }
 else
 {
-buf.push("&nbsp;\n&nbsp;<a id=\"menu-log-in\" class=\"col-sm-2 col-xs-3\">Log&nbsp;In</a>");
+buf.push("<a id=\"menu-log-in\">Log&nbsp;In</a>");
 }
-buf.push("</div>");;return buf.join("");
+buf.push("</div></div>");;return buf.join("");
 };
 
 this["JST"]["app/scripts/templates/microsite/FAQ"] = function anonymous(locals) {
