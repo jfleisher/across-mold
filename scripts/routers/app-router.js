@@ -280,7 +280,7 @@
       };
 
       AppRouter.prototype.initialize = function() {
-        Parse.initialize("q8RSB55zBX88cv27GWzRjXLHX3Ijk8haCfhIGbEH", "1WbjEiZ6dyiq0hxWEMciHr5jUmArpjdJjeNNVpw4", "H3klEp1w395F5iEVkEVUfjPHigQDgxiWJ218rh2v");
+        Parse.initialize("q8RSB55zBX88cv27GWzRjXLHX3Ijk8haCfhIGbEH", "1WbjEiZ6dyiq0hxWEMciHr5jUmArpjdJjeNNVpw4");
         this.currentUser = Parse.User.current();
         this.loadCMS();
         this.el = $("#main-stage");

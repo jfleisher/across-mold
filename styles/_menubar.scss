@@ -14,11 +14,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: $white-bkgd;
+  background: rgb(39,46,55);
   z-index: 998;
   text-align: center;
   height: 50px;
   border-bottom: 1px solid rgba(0,0,0,0.1);
+
   .select2-container-multi .select2-choices {
     width: 265px !important;
     margin-right: 30px !important;
