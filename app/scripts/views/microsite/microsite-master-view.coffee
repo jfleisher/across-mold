@@ -108,11 +108,11 @@ define [
 
     parallaxBackgroundHeight: ->
       if $('.device-xs:visible').length
-        return 600
+        return 563
       else if $('.device-sm:visible').length
-        return 1200
+        return 845
       else
-        return 1800
+        return 1268
 
     initParallax: =>
       $('#parallax-images').html('')
