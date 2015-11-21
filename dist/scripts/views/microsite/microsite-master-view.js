@@ -154,11 +154,11 @@
 
       MicrositeMasterView.prototype.parallaxBackgroundHeight = function() {
         if ($('.device-xs:visible').length) {
-          return 600;
+          return 422;
         } else if ($('.device-sm:visible').length) {
-          return 1200;
+          return 845;
         } else {
-          return 1800;
+          return 1268;
         }
       };
 

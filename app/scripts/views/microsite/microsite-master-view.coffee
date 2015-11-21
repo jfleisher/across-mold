@@ -108,7 +108,7 @@ define [
 
     parallaxBackgroundHeight: ->
       if $('.device-xs:visible').length
-        return 563
+        return 422
       else if $('.device-sm:visible').length
         return 845
       else
