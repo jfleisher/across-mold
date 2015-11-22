@@ -81,7 +81,7 @@
       MenuView.prototype.goMicrosite = function() {
         $(window).scrollTop(0);
         window.Mi.parallaxScrollPos = 0;
-        return window.Mi.appRouter.navigate("#/microsite", {
+        return window.Mi.appRouter.navigate("/", {
           trigger: true
         });
       };
@@ -281,9 +281,7 @@
           types: ['(regions)']
         };
         input = document.getElementById("search-location-input");
-        this.autocomplete = new google.maps.places.Autocomplete(input, acOptions);
-        input_dd = document.getElementById("search-location-input-dd");
-        return this.autocomplete_dd = new google.maps.places.Autocomplete(input_dd, acOptions);
+        return input_dd = document.getElementById("search-location-input-dd");
       };
 
       MenuView.prototype.closeModal = function(event) {
