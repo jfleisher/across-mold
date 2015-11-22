@@ -273,10 +273,7 @@
       };
 
       AppRouter.prototype.initNavBar = function() {
-        $('.fixed-navbar').html('');
-        return new Mi.Views.MenuView({
-          user: Parse.User.current()
-        });
+        return $('.fixed-navbar').html('');
       };
 
       AppRouter.prototype.initialize = function() {
@@ -293,12 +290,12 @@
       };
 
       AppRouter.prototype.cleanStage = function() {
-        this.initNavBar();
         $('div.imageHolder').remove();
         $('#login-box').modal('hide');
         $(".modal-content").modal('hide');
         $('.modal-backdrop').remove();
-        return $(window).scrollTop(0);
+        $(window).scrollTop(0);
+        return $('#main-stage').scrollTop(0);
       };
 
       AppRouter.prototype.showLogin = function() {
@@ -726,7 +723,7 @@
       };
 
       AppRouter.prototype.showDefault = function() {
-        return window.Mi.appRouter.navigate('#/microsite');
+        return window.Mi.appRouter.navigate('/');
       };
 
       AppRouter.prototype.editCurrentUserAccount = function(event) {

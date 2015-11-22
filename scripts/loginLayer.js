@@ -33,7 +33,7 @@
       LoginLayer.prototype.loginNow = function() {
         console.log('login called');
         if ($("#login-layer-pass").val() === "noble") {
-          return window.Mi.appRouter.navigate("#/microsite");
+          return window.Mi.appRouter.navigate("/");
         } else {
           return alert("incorrect password.");
         }
