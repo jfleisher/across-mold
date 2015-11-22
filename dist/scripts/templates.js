@@ -342,7 +342,7 @@ buf.push("<div class=\"footer-container container\"><div class=\"footer-links\">
 
 this["JST"]["app/scripts/templates/menuTemplate"] = function anonymous(locals) {
 var buf = [];
-var locals_ = (locals || {}),user = locals_.user;buf.push("<div><div class=\"empty-divider col-xs-0 col-sm-1\"></div><div class=\"col-xs-6 col-sm-5\"><div class=\"logo\"><img id=\"AcrossMold-logo\" src=\"images/logos/logo.png\"/></div></div><div class=\"col-xs-6 col-sm-5\"><div id=\"header-get-quote\" class=\"button hidden-xs\">Get a Quotation</div>");
+var locals_ = (locals || {}),user = locals_.user;buf.push("<div><div class=\"empty-divider col-xs-0 col-sm-1\"></div><div class=\"col-xs-6 col-sm-5\"><div class=\"logo\"><img id=\"AcrossMold-logo\" src=\"images/logos/logo.png\"/></div></div><div class=\"col-xs-6 col-sm-5\"><a href=\"#/quotation\"><div id=\"header-get-quote\" class=\"button hidden-xs\">Get a Quotation</div></a>");
 if ( user)
 {
 buf.push("<div id=\"account-icon\">");

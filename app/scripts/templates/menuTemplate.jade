@@ -5,9 +5,10 @@ div
       img#AcrossMold-logo(src="images/logos/logo.png")
 
   div.col-xs-6.col-sm-5
-    div#header-get-quote.button.hidden-xs
-      |Get a Quotation
-    
+    a(href="#/quotation")
+      div#header-get-quote.button.hidden-xs
+        |Get a Quotation
+      
     if user
       div#account-icon
         - var imgSrc = user.get("accountPictureUrl")

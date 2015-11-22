@@ -205,7 +205,7 @@ define [
 
     initNavBar: ->
       $('.fixed-navbar').html('')
-      new Mi.Views.MenuView user: Parse.User.current()
+      #new Mi.Views.MenuView user: Parse.User.current()
 
     initialize: ->
       Parse.initialize("q8RSB55zBX88cv27GWzRjXLHX3Ijk8haCfhIGbEH", "1WbjEiZ6dyiq0hxWEMciHr5jUmArpjdJjeNNVpw4")
@@ -224,12 +224,12 @@ define [
       @
 
     cleanStage: ->
-      @initNavBar()
       $('div.imageHolder').remove()
       $('#login-box').modal('hide')
       $(".modal-content").modal('hide')
       $('.modal-backdrop').remove()
       $(window).scrollTop(0)
+      $('#main-stage').scrollTop(0)
 
     showLogin: ->
       view = new Mi.Views.LoginLayer()
@@ -532,7 +532,7 @@ define [
 
     showDefault: ->
       # maybe just nav to microsite as default, with further nav accessible through drop down?
-      window.Mi.appRouter.navigate('#/microsite')
+      window.Mi.appRouter.navigate('/')
 
     editCurrentUserAccount: (event)->
       $('#account-settings-modal').remove()

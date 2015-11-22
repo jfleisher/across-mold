@@ -36,7 +36,7 @@ define [
       'click #usermenuDropdown a'         : 'handleUserMenu'
       'click #submit-login-dd'            : 'handleUserMenu'
       'onresize window'                   : 'check'
-      'click #AcrossMold-logo'               : 'goMicrosite'
+      'click #AcrossMold-logo'            : 'goMicrosite'
 
     initialize: (options)->
       @user = options.user
@@ -70,7 +70,7 @@ define [
     goMicrosite: ->
       $(window).scrollTop(0)
       window.Mi.parallaxScrollPos = 0
-      window.Mi.appRouter.navigate("#/microsite", {trigger: true})
+      window.Mi.appRouter.navigate("/", {trigger: true})
 
     showDropdown: ( event ) ->
       # console.log event.type
@@ -205,9 +205,9 @@ define [
     initPlacesAutocomplete: ->
       acOptions = { types: ['(regions)'] }
       input = document.getElementById("search-location-input")
-      @autocomplete = new google.maps.places.Autocomplete(input, acOptions)
+    #  @autocomplete = new google.maps.places.Autocomplete(input, acOptions)
       input_dd = document.getElementById("search-location-input-dd")
-      @autocomplete_dd = new google.maps.places.Autocomplete(input_dd, acOptions)
+    #  @autocomplete_dd = new google.maps.places.Autocomplete(input_dd, acOptions)
 
     closeModal: (event)->
       modalname = $(event.target).data('closemodal')

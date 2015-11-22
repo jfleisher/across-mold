@@ -29,7 +29,7 @@ define [
     loginNow: ->
       console.log 'login called'
       if $("#login-layer-pass").val() == "noble"
-        window.Mi.appRouter.navigate("#/microsite")
+        window.Mi.appRouter.navigate("/")
       else
         alert "incorrect password."
 
