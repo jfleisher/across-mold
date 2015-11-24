@@ -51,17 +51,22 @@ img[src="images/microsite_images/main-image2-sm.jpg"]{
 .table{
   position: relative;
   display: table;
-  .cell-middle{
+  .row{
+    width: 100%;
+    display: table-row;
     position: relative;
-    display: table-cell;
-    vertical-align: middle;
-    .description{
-      width: 60%;
-      float: left;
+    .cell{
+      display: table-cell;
     }
-    .image{
-      float: left;
-      width: 39%;
+    .description{  
+      vertical-align: center;
+      text-align: left;
+    }
+    .image {
+      &.split{ width: 50%; }
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
 }
@@ -366,7 +371,6 @@ button.close{
 .profile-desc-content {
   padding-left: 10px;
   padding-right: 10px;
-
 }
 
 .microsite-landing-subtitle {
@@ -398,13 +402,13 @@ button.close{
     color: $title-color-secondary;
     font-weight:400;
   }
-    margin-left:auto;
-    margin-right:auto;
-    width:70%;
-    padding-left:190px;
-    padding-bottom:170px;
-    position:absolute;
-    top:50px;
+  margin-left:auto;
+  margin-right:auto;
+  width:70%;
+  padding-left:190px;
+  padding-bottom:170px;
+  position:absolute;
+  top:50px;
 }
 
 .audience-buttons {
@@ -431,10 +435,10 @@ button.close{
 
   img:not(.scrolldown-top-button, .scrolldown-button, .scrolldown-arrow){
     padding: 20px;
-    max-width: 420px;
+    max-width: 500px;
   }
   .landing-contentslide{
-    @media only screen and ( orientation: landscape ) { width: 90%; }
+    @media only screen and ( orientation: landscape ) { width: 100%; }
     @media only screen and ( orientation: portrait ) { width: 95%; }
     margin: 0 auto;
     text-align:left;
@@ -448,10 +452,10 @@ button.close{
       p{
         margin: 16px 0;
         font-size: 18px;
-        line-height: 22px;
+        line-height: 24px;
         &.subhead{
           font-size: 20px;
-          line-height: 25px;
+          line-height: 26px;
         }
       }
     }
@@ -459,32 +463,32 @@ button.close{
       p{
         margin: 16px 0;
         font-size: 22px;
-        line-height: 27px;
+        line-height: 28px;
         &.subhead{
-          font-size: 27px;
-          line-height: 32px;
+          font-size: 24px;
+          line-height: 30px;
         }
       }
     }
     @media (max-width: $screen-md-max) and (min-width: $screen-sm-max+1) {
       p{
         margin: 16px 0;
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 18px;
+        line-height: 24px;
         &.subhead{
-          font-size: 29px;
-          line-height: 34px;
+          font-size: 20px;
+          line-height: 26px;
         }
       }
     }
     @media (min-width: $screen-md-max+1) {
       p{
         margin: 16px 0;
-        font-size: 28px;
-        line-height: 33px;
+        font-size: 22px;
+        line-height: 28px;
         &.organgesub{
-          font-size: 33px;
-          line-height: 38px;
+          font-size: 24px;
+          line-height: 30px;
         }
       }
     }
@@ -821,6 +825,7 @@ font-weight:bolder}
   .white-button:nth-child(n+1) {
     margin-left: 50px;
   }
+  input{ font-size: 18px;}
 }
 #profileimg{
   cursor:pointer;
